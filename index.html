@@ -1,0 +1,539 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remap, AI growth solutions for B2B firms</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;family=Noto+Serif:ital,wght@1,400;1,700&amp;display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  <script defer="" src="app.js"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+
+<body x-data="siteData()">
+  <svg style="width: 0; height: 0; position: absolute;" aria-hidden="true" focusable="false">
+    <filter id="marker-smudge" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" result="noise"></feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G">
+      </feDisplacementMap>
+    </filter>
+  </svg>
+
+  <header style="width: 100%; ">
+    <nav class="site-nav"
+      style="max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+      <div class="nav-left">
+        <details class="dropdown">
+          <summary class="nav-link"
+            style="border: none; padding: 0.3rem 0.6rem; cursor: pointer; color: var(--text-muted);">
+            Solutions
+          </summary>
+          <ul
+            style="background: var(--surface); border: 1px solid var(--mid); border-radius: 8px; box-shadow: var(--pico-box-shadow);">
+            <li><a href="#services" style="color: var(--text);">Strategy &amp; AI Consulting</a></li>
+            <li><a href="#services" style="color: var(--text);">Marketing Automation</a></li>
+            <li><a href="#services" style="color: var(--text);">AI Product Transformation</a></li>
+            <li><a href="#publishing-platform" style="color: var(--text);">Remap Publishing Platform</a></li>
+          </ul>
+        </details>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </div>
+      <div class="nav-center">
+        <a href="#" class="wordmark">Remap</a>
+      </div>
+      <div class="nav-right">
+        <a href="#rpp" class="nav-status" style="text-decoration: none;">
+          <span class="nav-status-dot">●</span> 2 spots · Mar '26
+        </a>
+        <button @click="bookingModalOpen = true" class="btn-primary" style="margin-bottom: 0;">Book a call</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="hero">
+      <div class="hero-content">
+        <p>AI-native marketing systems for B2B services businesses</p>
+        <h1><span>AI solutions that change </span><em>how your business works</em><span></span></h1>
+        <div class="hero-supporting-pill">
+          <span class="domain-pills">
+            <span class="domain-pill"><span class="domain-pill-dot" style="color: #C99A18">●</span> <span>Agentic
+                Workflows</span></span>
+            <span class="domain-pill"><span class="domain-pill-dot" style="color: #4A6FA5">●</span> <span>Go-to-Market
+                Strategy</span></span>
+            <span class="domain-pill"><span class="domain-pill-dot" style="color: #E8567F">●</span> <span>Marketing
+                Automation</span></span>
+            <span class="domain-pill"><span class="domain-pill-dot" style="color: #189E48">●</span> <span>CRM-LLM
+                Integration</span></span>
+            <span class="domain-pill"><span class="domain-pill-dot" style="color: #C9A96E">●</span> <span>AI
+                Publishing</span></span>
+          </span>
+          <div class="hero-CTA">
+            <button @click.prevent="bookingModalOpen = true" class="btn-primary">Book a call</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="kinfolk-container">
+      <div class="kinfolk-parallax-image"></div>
+    </section>
+
+    <section id="work" style="padding: 6rem 0;">
+      <h2 style="max-width:1000px;margin:auto;text-align: center;margin-bottom:5.5rem">I work with driven businesses and
+        people - small shop founders, product owners, AI pioneers</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 4rem;">
+
+        <article class="case-study-card dark">
+          <div class="case-study-image">
+            <div class="case-study-image-label">CASE STUDY</div>
+            <img src="assets/case-study-in-using-AI-for-content-marketing-and-lead-gen.jpg"
+              alt="Case Study - B2B Software and Services Agency" width="691" height="386">
+
+          </div>
+          <small
+            style="text-transform: uppercase; letter-spacing: 1px; color: var(--action); font-weight: bold;">Marketing
+            Automation AI</small>
+          <h3 style="margin-top: 0.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Storytelling drives $2M automation
+            pipeline</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;"><strong>The
+              Challenge:</strong>
+            Clients struggled to get success stories in front of the right decision-makers without relying on slow,
+            expensive traditional campaigns.</p>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;"><strong>The
+              Solutions:</strong> An
+            AI-enhanced outreach engine that analyzed strategic goals, matched them to third-party audience data, and
+            used AI to automatically source, enrich, and run highly personalized, storytelling-driven outreach
+            sequences.</p>
+          <p style="font-size: 0.95rem; color: var(--text); font-weight: 500;"><strong>The Result:</strong> 100+ highly
+            engaged leads per client, generating $2M+ in pipeline and $188k in closed-won revenue over 12 months.</p>
+        </article>
+
+        <article class="case-study-card light">
+          <div class="case-study-image">
+            <div class="case-study-image-label">CASE STUDY</div>
+            <img src="assets/case-study-in-ai-native-product-dev-affecting-GTM-strategy.jpg"
+              alt="Case Study - Stealth AI Startup" width="691" height="386">
+          </div>
+          <small
+            style="text-transform: uppercase; letter-spacing: 1px; color: var(--tertiary); font-weight: bold;">Strategy
+            &amp; AI Product</small>
+          <h3 style="margin-top: 0.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Product innovation unlocks GTM
+            strategy</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;"><strong>The
+              Challenge:</strong>
+            A seed-stage startup building AI tools for the mobile industry needed to solve a complex product bottleneck
+            and redefine go-to-market strategy.</p>
+          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;"><strong>The
+              Solutions:</strong>
+            Architected a highly sophisticated marketing asset generation pipeline, redefined the ICP, refined the
+            pricing model, and sync'ed product and GTM under an agile workflow</p>
+          <p style="font-size: 0.95rem; color: var(--text); font-weight: 500;"><strong>The Result:</strong> Unlocked a
+            significantly larger global addressable market and accelerated their Phase 1 and 2 GTM launches by two
+            months.</p>
+        </article>
+      </div>
+      <div
+        style="margin-top: 6rem; padding-top: 4rem; border-top: 1px solid var(--mid); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 4rem;">
+        <blockquote style="margin: 0; padding: 0; border: none;">
+          <p style="font-size: 1.25rem; color: var(--text); line-height: 1.6; margin-bottom: 1.5rem;">"Rowan built us an
+            n8n workflow that connects our Salesforce data to our content marketing system. What would have cost us
+            $2,000/month in Zapier fees now runs for under $100/month."</p>
+          <footer style="font-size: 0.85rem; color: var(--text-muted);">
+            <strong style="color: var(--text); display: block;">Dawn P.</strong>
+            Marketing Director, 500-person Technology Consulting Firm
+          </footer>
+        </blockquote>
+
+        <blockquote style="margin: 0; padding: 0; border: none;">
+          <p style="font-size: 1.25rem; color: var(--text); line-height: 1.6; margin-bottom: 1.5rem;">"He understood our
+            business requirements without needing extensive hand-holding, and delivered automation that actually works
+            in production - not just a demo that breaks when you scale it."</p>
+          <footer style="font-size: 0.85rem; color: var(--text-muted);">
+            <strong style="color: var(--text); display: block;">Paul K.</strong>
+            CTO, PE-held B2B Software Firm
+          </footer>
+        </blockquote>
+
+      </div>
+    </section>
+  </main>
+
+  <section id="services" class="services-full-width">
+    <div class="services-inner">
+      <div class="services-header" style="display: flex; justify-content: space-between; align-items: baseline;">
+        <span>Services &amp; Pricing</span>
+      </div>
+
+      <h2 style="max-width:1000px;margin:auto;text-align: left;margin-bottom: 1.5rem;margin-left: 0;margin-top:2rem">
+        Go-to-market strategist, fractional CMO &amp; product owner, automation builder
+      </h2>
+
+      <p style="color: #a3a3a3; font-size: 1.15rem; max-width: 800px; margin-bottom: 5.5rem; line-height: 1.6;">
+        Custom automation and product pipelines typically range from <strong style="color: #FAF8F3;">$5k–$15k</strong>.
+        Strategy engagements start at <strong style="color: #FAF8F3;">$2k</strong>.
+        <br>
+        <span style="font-size: 0.95em;">(For the publishing platform, see the <a href="#rpp"
+            style="color: var(--action); text-decoration: none;">RPP offer below</a>).</span>
+      </p>
+      <div class="service-row strategy">
+        <div class="service-info">
+          <h3>Strategy &amp; AI consulting</h3>
+          <p>I help clients harness AI as a business tool, bringing positioning, product, and go-to-market thinking to
+            that effort.</p>
+        </div>
+        <div class="service-deliverables">
+          <ul>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">AI readiness assessments</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Build vs buy / tech stack decisions</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Go-to-market strategy</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Prompting/context engineering training</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Model/inference selection advice</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-row automation">
+        <div class="service-info">
+          <h3>AI-native marketing automation</h3>
+          <p>I help B2B firms use agents and AI automations in their marketing.</p>
+        </div>
+        <div class="service-deliverables">
+          <ul>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Lead and candidate sourcing</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Landing page automation</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Prospecting intelligence</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Lead enrichment</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Content automation</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Warm and cold outreach</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">CRM automation</span></li>
+
+
+          </ul>
+        </div>
+      </div>
+
+      <div class="service-row product">
+        <div class="service-info">
+          <h3>AI Product Transformation</h3>
+          <p>I help founders and product teams build AI-native products, PoCs, and features.</p>
+        </div>
+        <div class="service-deliverables">
+          <ul>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Product positioning strategy</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">AI-forward product design</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Automation integration</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Agentic UX design</span></li>
+            <li><span class="material-symbols-outlined service-arrow">arrow_forward</span> <span
+                class="service-arrow">Proof of Concept development</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="logo-cloud-container">
+    <div class="logo-cloud-image"></div>
+  </section>
+
+  <main class="container">
+    <section id="publishing-platform" class="product-offer-section reveal-on-scroll is-visible" x-data="liveFeed()"
+      x-init="startFeed()">
+      <div class="product-offer-inner">
+        <div class="offer-header">
+          <span class="pilot-badge">PILOT PROGRAM</span>
+          <h2>Remap Publishing Platform</h2>
+          <p class="offer-lead">RPP automatically curates, scores, and edits intelligence from hundreds of industry
+            sources into a curation workflow <b>customized to your audience</b>. Get a branded weekly email newsletter;
+            repurpose content elsewhere.</p>
+        </div>
+        <div class="comparison-matrix">
+          <div class="old-way">
+            <h4>Old Way</h4>
+            <ul>
+              <li><span class="material-symbols-outlined icon-x">close</span> Inconsistent publishing cadence</li>
+              <li><span class="material-symbols-outlined icon-x">close</span> Random, generic news and updates</li>
+              <li><span class="material-symbols-outlined icon-x">close</span> 10+ hours a week producing issue</li>
+              <li><span class="material-symbols-outlined icon-x">close</span> Jr marketer runs the show</li>
+              <li><span class="material-symbols-outlined icon-x">close</span> Low open rates and unsubscribes</li>
+            </ul>
+          </div>
+          <div class="new-way">
+            <h4>RPP Way</h4>
+            <ul>
+              <li><span class="material-symbols-outlined icon-check">check</span> Every week, rain or shine</li>
+              <li><span class="material-symbols-outlined icon-check">check</span> High-signal, relevant content</li>
+              <li><span class="material-symbols-outlined icon-check">check</span> 10+ minutes a week editing</li>
+              <li><span class="material-symbols-outlined icon-check">check</span> Business owner/SME as editor</li>
+              <li><span class="material-symbols-outlined icon-check">check</span> Warm audience of prospects</li>
+            </ul>
+          </div>
+        </div>
+        <div class="offer-footer">
+          <div class="pricing">
+            <p><strong>From $750/month</strong></p>
+            <button @click.prevent="bookingModalOpen = true" class="btn-primary" style="border: none;">Claim a pilot
+              spot</button>
+          </div>
+          <div class="live-feed-box">
+            <div class="live-indicator">
+              <span class="live-dot"></span> SYSTEM ACTIVE
+            </div>
+            <div class="terminal-text">
+              <span style="color: #189E48;">&gt;</span> <span x-text="activities[currentIndex]">Formatting HTML layout
+                for Mailchimp...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="editorial-section reveal-on-scroll is-visible">
+      <h2>About Remap</h2>
+      <p>Remap is a one-person AI implementation practice run by Rowan Price. I've spent 20-plus years across agency
+        ownership, CRM consulting, SaaS product and GTM work, and lead-gen-focused content marketing for services firms.
+      </p>
+      <p>I design products, orchestrate AI models, and think carefully about where automation and AI creates lasting
+        value. The AI systems I build for clients are the same ones I run in my own business every day, including the
+        Remap Publishing Platform described above.</p>
+      <p class="location-tag">Portland, OR</p>
+    </section>
+
+    <section id="faq" class="editorial-section reveal-on-scroll is-visible">
+      <h2>Frequently asked questions</h2>
+      <div class="accordion-group">
+
+        <div class="accordion-item is-open" :class="{ 'is-open': openFaq === 0 }">
+          <button class="accordion-trigger" @click="openFaq = openFaq === 0 ? null : 0" :aria-expanded="openFaq === 0"
+            aria-expanded="true">
+            <span>What does Remap do?</span>
+            <span class="material-symbols-outlined accordion-icon"
+              x-text="openFaq === 0 ? 'remove' : 'add'">remove</span>
+          </button>
+          <div class="accordion-content" x-show="openFaq === 0" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 transform -translate-y-2"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform -translate-y-2">
+            <p>I help B2B companies use AI to improve their marketing, product, and business operations. I do this by
+              designing and building AI systems that handle repetitive tasks, surface insights, and create new ways of
+              working.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item" :class="{ 'is-open': openFaq === 1 }">
+          <button class="accordion-trigger" @click="openFaq = openFaq === 1 ? null : 1" :aria-expanded="openFaq === 1"
+            aria-expanded="false">
+            <span>Do you build AI agents or agentic workflows?</span>
+            <span class="material-symbols-outlined accordion-icon" x-text="openFaq === 1 ? 'remove' : 'add'">add</span>
+          </button>
+          <div class="accordion-content" x-show="openFaq === 1" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 transform -translate-y-2"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform -translate-y-2" style="display: none;">
+            <p>Mostly workflows. Autonomous AI agents are oversold, expensive, and fragile. Agentic workflows with
+              deterministic automation, with AI at key decision points, and humans in the loop are more reliable and
+              more
+              useful. I'll recommend an agent when it's the right call though.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" :class="{ 'is-open': openFaq === 2 }">
+          <button class="accordion-trigger" @click="openFaq = openFaq === 2 ? null : 2" :aria-expanded="openFaq === 2"
+            aria-expanded="false">
+            <span>Why n8n instead of Zapier or Make?</span>
+            <span class="material-symbols-outlined accordion-icon" x-text="openFaq === 2 ? 'remove' : 'add'">add</span>
+          </button>
+          <div class="accordion-content" x-show="openFaq === 2" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 transform -translate-y-2"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform -translate-y-2" style="display: none;">
+            <p>It depends on the situation, but generally n8n enables an AI-native stack that scales with predictable
+              costs. Typical migrations from Zapier to n8n reduce API costs from $2,000/month to under $100. That said,
+              Zapier, Make, Pipedream, and others can be part of a solution.</p>
+          </div>
+        </div>
+
+
+
+
+        <div class="accordion-item" :class="{ 'is-open': openFaq === 5 }">
+          <button class="accordion-trigger" @click="openFaq = openFaq === 5 ? null : 5" :aria-expanded="openFaq === 5"
+            aria-expanded="false">
+            <span>What does "AI-native strategy consulting" actually look like?</span>
+            <span class="material-symbols-outlined accordion-icon" x-text="openFaq === 5 ? 'remove' : 'add'">add</span>
+          </button>
+          <div class="accordion-content" x-show="openFaq === 5" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 transform -translate-y-2"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform -translate-y-2" style="display: none;">
+            <p>It starts with me assessing where AI could help with repetitive daily processes. Deliverables vary: specs for a new features or campaign,  a proof-of-concept automation, a build-vs-buy analysis - it could also be prompting/content training. Over time the engagement lets you stack wins and build your own AI expertise.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" :class="{ 'is-open': openFaq === 6 }">
+          <button class="accordion-trigger" @click="openFaq = openFaq === 6 ? null : 6" :aria-expanded="openFaq === 6"
+            aria-expanded="false">
+            <span>What's the typical timeline?</span>
+            <span class="material-symbols-outlined accordion-icon" x-text="openFaq === 6 ? 'remove' : 'add'">add</span>
+          </button>
+          <div class="accordion-content" x-show="openFaq === 6" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 transform -translate-y-2"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform -translate-y-2" style="display: none;">
+            <p>Two to six weeks for most automation projects. AI product development varies by scope. Strategy
+              consulting engagements are usually 2-4 months, and managed marketing automation campaigns can last from 4 to 12 months.</p>
+          </div>
+        </div>
+
+        <div class="accordion-item" :class="{ 'is-open': openFaq === 7 }">
+          <button class="accordion-trigger" @click="openFaq = openFaq === 7 ? null : 7" :aria-expanded="openFaq === 7"
+            aria-expanded="false">
+            <span>Do you offer ongoing support?</span>
+            <span class="material-symbols-outlined accordion-icon" x-text="openFaq === 7 ? 'remove' : 'add'">add</span>
+          </button>
+          <div class="accordion-content" x-show="openFaq === 7" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 transform -translate-y-2"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition ease-in duration-150"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform -translate-y-2" style="display: none;">
+            <p>Yes, on-demand or via retainer. Every project also includes documentation (Loom
+              video + written guide) and live training .</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <div class="site-anchor">
+    <section id="contact" class="final-cta">
+      <h2>Want to discuss how AI can change the way you work?</h2>
+      <p class="cta-supporting">Start with a 20-minute conversation. No pitch, no pressure — just a clear-eyed look at
+        where AI fits in your operations.</p>
+      <button @click.prevent="bookingModalOpen = true" class="btn-primary">Book a call</button>
+      <p class="cta-email" x-data="{ copied: false }">
+        Prefer email?
+        <a href="#"
+          @click.prevent="navigator.clipboard.writeText('rowan@remaphq.com'); copied = true; setTimeout(() =&gt; copied = false, 2000)"
+          :style="copied ? 'color: var(--tertiary); text-decoration: none;' : 'cursor: pointer;'"
+          style="cursor: pointer;">
+          <span x-show="!copied">rowan@remaphq.com</span>
+          <span x-show="copied" style="display: none;">✓ Copied to clipboard</span>
+        </a>
+      </p>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="wordmark" style="color: #FAF8F3;">Remap</a>
+          <p>Remap is led by Rowan, a marketing and technology strategist with two decades of experience across brand
+            strategy, CRM consulting, and digital marketing. A former agency owner, Rowan now helps B2B businesses
+            redesign how they work with AI-native automation and strategic consulting.</p>
+          <a href="https://linkedin.com/in/rowanprice" class="social-link">LinkedIn</a>
+        </div>
+
+        <div class="footer-nav">
+          <h4>What we build</h4>
+          <ul>
+            <li><a href="#services">AI-native marketing solutions</a></li>
+            <li><a href="#services">n8n-orchestrated automations</a></li>
+            <li><a href="#services">Agents that pair well with teams</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-nav">
+          <h4>How we think</h4>
+          <ul>
+            <li><a href="#services">Marketing, positioning, and brand strategy</a></li>
+            <li><a href="#services">AI-first: engineering context and choosing agents vs LLMs</a></li>
+            <li><a href="#services">Orchestrating product and GTM as one</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <a href="#" x-data="{ copied: false }"
+            @click.prevent="navigator.clipboard.writeText('rowan@remaphq.com'); copied = true; setTimeout(() =&gt; copied = false, 2000)"
+            :style="copied ? 'color: var(--tertiary); text-decoration: none;' : 'cursor: pointer;'"
+            style="cursor: pointer;">
+            <span x-show="!copied">rowan@remaphq.com</span>
+            <span x-show="copied" style="display: none;">✓ Copied</span>
+          </a>
+          <p>3439 SE Hawthorne Blvd</p>
+          <p>Portland, OR 97214</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 Remap Holdings LLC | <a href="https://remaphq.com/privacy">Privacy policy</a></p>
+      </div>
+    </footer>
+  </div>
+  <dialog x-show="bookingModalOpen" :open="bookingModalOpen" @keydown.escape.window="bookingModalOpen = false"
+    style="display: none;">
+    <article @click.outside="bookingModalOpen = false">
+
+      <header>
+        <h3 style="color: #FAF8F3; margin: 0; font-size: 1.25rem; font-weight: 500;">Schedule a strategy call</h3>
+        <button aria-label="Close" @click="bookingModalOpen = false"
+          style="background: transparent; border: none; color: #a3a3a3; cursor: pointer; padding: 0; font-size: 1.5rem; line-height: 1;">✕</button>
+      </header>
+
+      <div style="width: 100%; height: 650px; background-color: #ffffff;">
+        <iframe
+          src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2opTI4DLwRH_1VFhOV4lzi1YPdUhM-0sOMOzLgPoIbeUu1D6bfNcTyzN0tr2YtzFP-3sPyB0km"
+          width="100%" height="100%" frameborder="0" style="border: none;">
+        </iframe>
+      </div>
+
+    </article>
+  </dialog>
+
+
+  <div id="voiceright-floating-button" class="voiceright-hidden" data-state="idle" aria-label="Start dictation"><img
+      id="voiceright-button-icon" alt="Microphone"
+      src="chrome-extension://nolgcclknepogfbobaeegoccdnoplamn/icons/icon-ready-32.png"></div>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /lp-your-first-healthcare-story.php
+Disallow: /portfolio-authorized.php
