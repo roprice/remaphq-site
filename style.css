@@ -1215,12 +1215,44 @@ span.material-symbols-outlined.service-arrow {
     transition: color 0.2s ease;
 }
 
-/* Override Pico CSS button defaults for the trigger */
+/* ── Reset Global Button Styles for Accordion Triggers ── */
+.accordion-trigger {
+    box-shadow: none !important;
+    /* Removes the 3D inset border and drop shadow */
+    border-radius: 0;
+    transform: none !important;
+    /* Prevents it from jumping up */
+    filter: none !important;
+}
+
+/* Remove the hover/focus effects that bled over from the global button */
 .accordion-trigger:hover,
-.accordion-trigger:focus {
-    background: transparent;
-    color: var(--secondary);
-    box-shadow: none;
+.accordion-trigger:focus-visible {
+    box-shadow: none !important;
+    transform: none !important;
+    filter: none !important;
+    background-color: transparent !important;
+    border: none;
+}
+
+/* ── Smooth color transition for the accordion text/icon ── */
+.accordion-trigger {
+    transition: color 0.9s ease-in-out !important;
+    /* Ensures the fade is smooth */
+}
+
+/* ── Apply the Jacket Blue color on Hover AND when Open ── */
+.accordion-trigger:hover,
+.accordion-item.is-open .accordion-trigger,
+.accordion-trigger[aria-expanded="true"] {
+    color: var(--secondary) !important;
+}
+
+/* Optional: If you want to keep an accessibility focus ring just for the text */
+.accordion-trigger:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 4px;
+    border-radius: 4px;
 }
 
 .accordion-icon {
