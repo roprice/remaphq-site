@@ -30,16 +30,13 @@
   </svg>
 
   <header style="width: 100%; ">
-    <nav class="site-nav"
-      style="max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+    <nav class="site-nav">
       <div class="nav-left">
         <details class="dropdown">
-          <summary class="nav-link"
-            style="border: none; padding: 0.3rem 0.6rem; cursor: pointer; color: var(--text-muted);">
+          <summary class="nav-link">
             Solutions
           </summary>
-          <ul
-            style="background: var(--surface); border: 1px solid var(--mid); border-radius: 8px; box-shadow: var(--pico-box-shadow);">
+          <ul class="dropdown -menu">
             <li><a href="#services" style="color: var(--text);">Strategy &amp; AI Consulting</a></li>
             <li><a href="#services" style="color: var(--text);">Marketing Automation</a></li>
             <li><a href="#services" style="color: var(--text);">AI Product Transformation</a></li>
@@ -53,8 +50,8 @@
         <a href="#" class="wordmark">Remap</a>
       </div>
       <div class="nav-right">
-        <a href="#rpp" class="nav-status" style="text-decoration: none;">
-          <span class="nav-status-dot">●</span> 2 spots · Mar '26
+        <a href="#publishing-platform" class="nav-status" style="text-decoration: none;">
+          <span class="nav-status-dot">●</span> 2 spots open · Mar '26
         </a>
         <button @click="bookingModalOpen = true" class="btn-primary" style="margin-bottom: 0;">Book a call</button>
       </div>
@@ -90,10 +87,14 @@
       <div class="kinfolk-parallax-image"></div>
     </section>
 
+
+
+
+
     <section id="work" style="padding: 6rem 0;">
-      <h2 style="max-width:1000px;margin:auto;text-align: center;margin-bottom:5.5rem">I work with driven businesses and
+      <h2 class="case-study-header">I work with driven businesses and
         people - small shop founders, product owners, AI pioneers</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 4rem;">
+      <div class="case-study-grid">
 
         <article class="case-study-card dark">
           <div class="case-study-image">
@@ -102,16 +103,15 @@
               alt="Case Study - B2B Software and Services Agency" width="691" height="386">
 
           </div>
-          <small
-            style="text-transform: uppercase; letter-spacing: 1px; color: var(--action); font-weight: bold;">Marketing
+          <small class="case-study-card-tag">Marketing
             Automation AI</small>
-          <h3 style="margin-top: 0.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Storytelling drives $2M automation
+          <h3 class="case-study-card-title">Storytelling drives $2M automation
             pipeline</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;"><strong>The
+          <p class="case-study-card-text"><strong>The
               Challenge:</strong>
             Clients struggled to get success stories in front of the right decision-makers without relying on slow,
             expensive traditional campaigns.</p>
-          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;"><strong>The
+          <p class="case-study-card-text"><strong>The
               Solutions:</strong> An
             AI-enhanced outreach engine that analyzed strategic goals, matched them to third-party audience data, and
             used AI to automatically source, enrich, and run highly personalized, storytelling-driven outreach
@@ -126,42 +126,44 @@
             <img src="assets/case-study-in-ai-native-product-dev-affecting-GTM-strategy.jpg"
               alt="Case Study - Stealth AI Startup" width="691" height="386">
           </div>
-          <small
-            style="text-transform: uppercase; letter-spacing: 1px; color: var(--tertiary); font-weight: bold;">Strategy
+          <small class="case-study-card-tag">Strategy
             &amp; AI Product</small>
-          <h3 style="margin-top: 0.5rem; margin-bottom: 1rem; font-size: 1.5rem;">Product innovation unlocks GTM
+          <h3 class="case-study-card-title">Product
+            innovation unlocks GTM
             strategy</h3>
-          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;"><strong>The
+          <p class="case-study-card-text"><strong>The
               Challenge:</strong>
             A seed-stage startup building AI tools for the mobile industry needed to solve a complex product bottleneck
             and redefine go-to-market strategy.</p>
-          <p style="font-size: 0.95rem; color: var(--text-muted); margin-bottom: 0.5rem;"><strong>The
+          <p class="case-study-card-text"><strong>The
               Solutions:</strong>
             Architected a highly sophisticated marketing asset generation pipeline, redefined the ICP, refined the
             pricing model, and sync'ed product and GTM under an agile workflow</p>
-          <p style="font-size: 0.95rem; color: var(--text); font-weight: 500;"><strong>The Result:</strong> Unlocked a
+          <p class="case-study-card-text"><strong>The Result:</strong> Unlocked a
             significantly larger global addressable market and accelerated their Phase 1 and 2 GTM launches by two
             months.</p>
         </article>
       </div>
-      <div
-        style="margin-top: 6rem; padding-top: 4rem; border-top: 1px solid var(--mid); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 4rem;">
-        <blockquote style="margin: 0; padding: 0; border: none;">
-          <p style="font-size: 1.25rem; color: var(--text); line-height: 1.6; margin-bottom: 1.5rem;">"Rowan built us an
+
+
+
+      <div class="testimonials-container">
+        <blockquote class="testimonial">
+          <p class="testimonial-text">"Rowan built us an
             n8n workflow that connects our Salesforce data to our content marketing system. What would have cost us
             $2,000/month in Zapier fees now runs for under $100/month."</p>
-          <footer style="font-size: 0.85rem; color: var(--text-muted);">
-            <strong style="color: var(--text); display: block;">Dawn P.</strong>
+          <footer class="testimonial-footer">
+            <strong class="testimonial-footer-name">Dawn P.</strong>
             Marketing Director, 500-person Technology Consulting Firm
           </footer>
         </blockquote>
 
-        <blockquote style="margin: 0; padding: 0; border: none;">
-          <p style="font-size: 1.25rem; color: var(--text); line-height: 1.6; margin-bottom: 1.5rem;">"He understood our
+        <blockquote class="testimonial">
+          <p class="testimonial-text">"He understood our
             business requirements without needing extensive hand-holding, and delivered automation that actually works
             in production - not just a demo that breaks when you scale it."</p>
-          <footer style="font-size: 0.85rem; color: var(--text-muted);">
-            <strong style="color: var(--text); display: block;">Paul K.</strong>
+          <footer class="testimonial-footer">
+            <strong class="testimonial-footer-name">Paul K.</strong>
             CTO, PE-held B2B Software Firm
           </footer>
         </blockquote>
@@ -172,21 +174,23 @@
 
   <section id="services" class="services-full-width">
     <div class="services-inner">
-      <div class="services-header" style="display: flex; justify-content: space-between; align-items: baseline;">
+      <div class="services-header">
         <span>Services &amp; Pricing</span>
       </div>
 
-      <h2 style="max-width:1000px;margin:auto;text-align: left;margin-bottom: 1.5rem;margin-left: 0;margin-top:2rem">
+      <h2 class="service-header-h2">
         Go-to-market strategist, fractional CMO &amp; product owner, automation builder
       </h2>
 
-      <p style="color: #a3a3a3; font-size: 1.15rem; max-width: 800px; margin-bottom: 5.5rem; line-height: 1.6;">
-        Custom automation and product pipelines typically range from <strong style="color: #FAF8F3;">$5k–$15k</strong>.
-        Strategy engagements start at <strong style="color: #FAF8F3;">$2k</strong>.
+      <p class="service-info-p">
+        Custom automation and product pipelines typically range from <strong
+          class="service-info-p-strong">$5k–$15k</strong>.
+        Strategy engagements start at <strong class="service-info-p-strong">$2k</strong>.
         <br>
-        <span style="font-size: 0.95em;">(For the publishing platform, see the <a href="#rpp"
-            style="color: var(--action); text-decoration: none;">RPP offer below</a>).</span>
+        <span class="service-info-p-small">(For the publishing platform, see the <a class="service-info-p-small-link"
+            href="#rpp">RPP offer below</a>).</span>
       </p>
+
       <div class="service-row strategy">
         <div class="service-info">
           <h3>Strategy &amp; AI consulting</h3>
@@ -403,7 +407,10 @@
             x-transition:leave="transition ease-in duration-150"
             x-transition:leave-start="opacity-100 transform translate-y-0"
             x-transition:leave-end="opacity-0 transform -translate-y-2" style="display: none;">
-            <p>It starts with me assessing where AI could help with repetitive daily processes. Deliverables vary: specs for a new features or campaign,  a proof-of-concept automation, a build-vs-buy analysis - it could also be prompting/content training. Over time the engagement lets you stack wins and build your own AI expertise.</p>
+            <p>It starts with me assessing where AI could help with repetitive daily processes. Deliverables vary: specs
+              for a new features or campaign, a proof-of-concept automation, a build-vs-buy analysis - it could also be
+              prompting/content training. Over time the engagement lets you stack wins and build your own AI expertise.
+            </p>
           </div>
         </div>
 
@@ -420,7 +427,8 @@
             x-transition:leave-start="opacity-100 transform translate-y-0"
             x-transition:leave-end="opacity-0 transform -translate-y-2" style="display: none;">
             <p>Two to six weeks for most automation projects. AI product development varies by scope. Strategy
-              consulting engagements are usually 2-4 months, and managed marketing automation campaigns can last from 4 to 12 months.</p>
+              consulting engagements are usually 2-4 months, and managed marketing automation campaigns can last from 4
+              to 12 months.</p>
           </div>
         </div>
 
@@ -476,9 +484,9 @@
         <div class="footer-nav">
           <h4>What we build</h4>
           <ul>
-            <li><a href="#services">AI-native marketing solutions</a></li>
-            <li><a href="#services">n8n-orchestrated automations</a></li>
-            <li><a href="#services">Agents that pair well with teams</a></li>
+            <li><a href="#services">AI-native marketing automation</a></li>
+            <li><a href="#services">n8n-orchestrated solutions</a></li>
+            <li><a href="#services">Agents that amplify human thinking</a></li>
           </ul>
         </div>
 
@@ -505,6 +513,9 @@
         </div>
       </div>
 
+
+
+
       <div class="footer-bottom">
         <p>© 2026 Remap Holdings LLC | <a href="https://remaphq.com/privacy">Privacy policy</a></p>
       </div>
@@ -515,12 +526,11 @@
     <article @click.outside="bookingModalOpen = false">
 
       <header>
-        <h3 style="color: #FAF8F3; margin: 0; font-size: 1.25rem; font-weight: 500;">Schedule a strategy call</h3>
-        <button aria-label="Close" @click="bookingModalOpen = false"
-          style="background: transparent; border: none; color: #a3a3a3; cursor: pointer; padding: 0; font-size: 1.5rem; line-height: 1;">✕</button>
+        <h3 class="booking-calendar-title">Schedule a strategy call</h3>
+        <button aria-label="Close" @click="bookingModalOpen = false">✕</button>
       </header>
 
-      <div style="width: 100%; height: 650px; background-color: #ffffff;">
+      <div class="booking-calendar" style="width: 100%; height: 650px; background-color: #ffffff;">
         <iframe
           src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2opTI4DLwRH_1VFhOV4lzi1YPdUhM-0sOMOzLgPoIbeUu1D6bfNcTyzN0tr2YtzFP-3sPyB0km"
           width="100%" height="100%" frameborder="0" style="border: none;">
@@ -530,10 +540,6 @@
     </article>
   </dialog>
 
-
-  <div id="voiceright-floating-button" class="voiceright-hidden" data-state="idle" aria-label="Start dictation"><img
-      id="voiceright-button-icon" alt="Microphone"
-      src="chrome-extension://nolgcclknepogfbobaeegoccdnoplamn/icons/icon-ready-32.png"></div>
 </body>
 
 </html>

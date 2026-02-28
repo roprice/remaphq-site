@@ -11,14 +11,24 @@ function siteData() {
             ];
 
             setInterval(() => {
-                // Look for the actual HTML elements instead of the JSON array
                 const dots = document.querySelectorAll('.domain-pill-dot');
                 if (dots.length > 0) {
                     let randomDot = dots[Math.floor(Math.random() * dots.length)];
                     let randomColor = brandPalette[Math.floor(Math.random() * brandPalette.length)];
+
+                    // 1. Change the color
                     randomDot.style.color = randomColor;
+
+                    // 2. Add the blip animation
+                    randomDot.classList.add('blip-active');
+
+                    // 3. Remove the class after the animation finishes (300ms) 
+                    // so it can fire again later
+                    setTimeout(() => {
+                        randomDot.classList.remove('blip-active');
+                    }, 300);
                 }
-            }, 2000);
+            }, 4000); // Changed to 4 seconds
         },
         /* ── State ── */
         activeTab: 'automation',
