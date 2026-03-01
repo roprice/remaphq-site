@@ -16,19 +16,21 @@ function siteData() {
                     let randomDot = dots[Math.floor(Math.random() * dots.length)];
                     let randomColor = brandPalette[Math.floor(Math.random() * brandPalette.length)];
 
-                    // 1. Change the color
+                    // 1. Change the color first — CSS transition fades it over 1.2s
                     randomDot.style.color = randomColor;
 
-                    // 2. Add the blip animation
-                    randomDot.classList.add('blip-active');
-
-                    // 3. Remove the class after the animation finishes (300ms) 
-                    // so it can fire again later
+                    // 2. Wait for the color transition to finish, THEN blip
+                    //    so it's the NEW color that scales up
                     setTimeout(() => {
-                        randomDot.classList.remove('blip-active');
-                    }, 300);
+                        randomDot.classList.add('blip-active');
+
+                        // 3. Remove the class after the animation finishes (1.5s)
+                        setTimeout(() => {
+                            randomDot.classList.remove('blip-active');
+                        }, 1500);
+                    }, 1200); // matches the CSS transition: color 1.2s
                 }
-            }, 4000); // Changed to 4 seconds
+            }, 4000); // how often a dot is picked
         },
         /* ── State ── */
         activeTab: 'automation',
