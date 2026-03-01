@@ -1039,6 +1039,7 @@ section#services {
 .services-header {
     text-transform: uppercase;
     border-bottom: 1px solid;
+    color: var(--surface)
 }
 
 .service-deliverables {
@@ -1046,13 +1047,13 @@ section#services {
 }
 
 .service-info h3 {
-    color: #FAF8F3;
+    color: var(--surface);
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 .service-info p {
-    color: #a3a3a3;
+    color: var(--surface);
     font-size: 1.1rem;
     line-height: 1.6;
 }
@@ -1066,7 +1067,7 @@ section#services {
 .service-deliverables li {
     list-style-type: none !important;
     margin-bottom: 0.75rem;
-    color: #e5e5e5;
+    color: var(--surface);
 }
 
 span.material-symbols-outlined.service-arrow {
@@ -1091,11 +1092,11 @@ span.material-symbols-outlined.service-arrow {
 
 .newsletter-block h3 {
     margin-top: 0.5rem;
-    color: #FAF8F3;
+    color: var(--surface);
 }
 
 .newsletter-block p {
-    color: #a3a3a3;
+    color: var(--surface);
     font-size: 1.1rem;
     line-height: 1.6;
 }
