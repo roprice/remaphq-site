@@ -190,7 +190,16 @@ html {
     /* Forces the scroll to stop 100px above the section so your sticky header doesn't cover the title */
 }
 
-
+address,
+blockquote,
+dl,
+ol,
+p,
+pre,
+table,
+ul {
+    color: var(--text);
+}
 
 /* ═══════════════════════════════════════════════════════
 BASE STYLES
