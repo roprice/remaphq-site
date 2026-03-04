@@ -1338,6 +1338,11 @@ span.material-symbols-outlined.service-arrow {
     margin: 0 auto;
 }
 
+.offer-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .offer-header h2 {
     color: var(--surface);
     margin-top: 1rem;
