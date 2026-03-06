@@ -970,6 +970,10 @@ KINFOLK PARALLAX CLIP REVEAL
     font-weight: 500;
 }
 
+.agent-cta-card h2 .participle {
+    opacity: .5;
+}
+
 .agent-cta-card p {
     font-size: 1.1rem;
     color: #000;
