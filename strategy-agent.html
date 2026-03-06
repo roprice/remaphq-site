@@ -897,7 +897,7 @@ CSS CUSTOM PROPERTIES
                     <template x-for="(msg, idx) in messages" :key="idx">
                         <div>
                             <div :class="'msg msg-' + msg.role">
-                                <div class="msg-body" x-text="msg.content"></div>
+                                <div class="msg-body" x-html="msg.content"></div>
                             </div>
                             <div class="msg-divider" x-show="idx < messages.length - 1"></div>
                         </div>
@@ -1051,7 +1051,7 @@ CSS CUSTOM PROPERTIES
                     this.extractTopicsFromDOM();
                     this.messages.push({
                         role: 'assistant',
-                        content: "Hi, I'm an AI agent designed by Remap to conduct a discovery interview. We're going to map out a strategy document for your service, product, or feature.\n\nWhat name does it go by?"
+                        content: "Hi, I'm an AI agent designed by Remap to conduct a discovery interview. We're going to map out a strategy document for your service, product, or feature.<br><br>What name does it go by?"
                     });
                 },
 
