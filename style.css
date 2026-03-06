@@ -924,34 +924,41 @@ KINFOLK PARALLAX CLIP REVEAL
     overflow: hidden;
 }
 
-/* Remove the dark overlay (::before) from the previous step! */
 
-/* The new soft card */
-/* Update your card class to remove transitions and start at 0 opacity */
+
 .agent-cta-card {
     position: relative;
     z-index: 2;
-    background-color: #FCFBF9;
-    border: 1px solid #EBE8E2;
-    border-radius: 24px;
-    padding: 4rem 3rem;
-    max-width: 550px;
+    background-color: var(--surface);
+    border: 1px solid var(--mid);
+    border-radius: 1.5rem;
+    max-width: 470px;
+    padding: 2rem 2rem 2.5rem 2rem;
     text-align: center;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-
-    /* Start invisible */
     opacity: 0;
-    /* Tell the browser to optimize for opacity changes */
     will-change: opacity;
 }
 
-.agent-cta-card .eyebrow {
-    display: block;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--secondary) !important;
-    /* Muted taupe/grey */
+
+
+.tool-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--text-muted);
+    font-weight: 300;
+}
+
+.tool-badge .domain-pill-dot {
+    padding-right: 4px;
+}
+
+.agent-cta-card h2 {
+    margin-top: 0;
+
     margin-bottom: 1rem;
 }
 
@@ -975,7 +982,7 @@ KINFOLK PARALLAX CLIP REVEAL
     display: inline-block;
     background-color: #000;
     /* Soft grey from your Send button, or use a primary brand color */
-    color: #ffffff;
+    color: var(--surface);
     padding: 0.8rem 2rem;
     border-radius: 50px;
     /* Pill shape */
@@ -986,8 +993,10 @@ KINFOLK PARALLAX CLIP REVEAL
 }
 
 .btn-agent-primary:hover {
-    background-color: #7A7A7A;
-    /* Slightly darker on hover */
+    filter: brightness(1.2);
+    color: var(--surface);
+    transform: translateY(-2px);
+    transition: all 0.2s ease;
 }
 
 
@@ -1225,6 +1234,10 @@ span.material-symbols-outlined.service-arrow {
     margin-bottom: 1rem;
     display: inline-block;
 }
+
+
+
+
 
 /* Live Feed Box */
 .live-feed-box {
