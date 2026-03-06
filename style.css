@@ -981,11 +981,9 @@ KINFOLK PARALLAX CLIP REVEAL
 .btn-agent-primary {
     display: inline-block;
     background-color: #000;
-    /* Soft grey from your Send button, or use a primary brand color */
     color: var(--surface);
-    padding: 0.8rem 2rem;
-    border-radius: 50px;
-    /* Pill shape */
+    padding: 0.6rem 1.7rem;
+    border-radius: 20px;
     text-decoration: none;
     font-weight: 500;
     font-size: 1rem;
