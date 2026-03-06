@@ -739,7 +739,8 @@
                     <button class="download-btn" @click="downloadTranscript()">Download transcript.md</button>
                     <button class="download-btn" @click="generateAndDownloadStrategy()"
                         :disabled="isGeneratingStrategy">
-                        <span x-text="isGeneratingStrategy ? 'Generating...' : 'Download strategy.md'"></span>
+                        <span
+                            x-text="isGeneratingStrategy ? 'Generating... (2 minute wait)' : 'Download strategy.md'"></span>
                     </button>
                 </div>
             </div><!-- end .chat-column -->
@@ -1260,7 +1261,6 @@ If none were covered, respond with an empty array: []`;
                             .map(m => `${m.role === 'assistant' ? 'Agent' : 'User'}: ${m.content}`)
                             .join('\n\n');
 
-                        // Build synthesis prompt from DOM template
                         const templateInstructions = this.getSynthesisTemplate();
 
                         const synthesisPrompt = `${templateInstructions}
@@ -1271,14 +1271,20 @@ ${coveredData}
 --- FULL TRANSCRIPT ---
 ${transcript}`;
 
+                        const controller = new AbortController();
+                        const timeoutId = setTimeout(() => controller.abort(), 180000);
+
                         const res = await fetch(PROXY_ENDPOINT, {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
+                            signal: controller.signal,
                             body: JSON.stringify({
                                 type: 'synthesis',
                                 messages: [{ role: 'user', content: synthesisPrompt }]
                             })
                         });
+
+                        clearTimeout(timeoutId);
 
                         if (!res.ok) {
                             const err = await res.text();
@@ -1288,7 +1294,6 @@ ${transcript}`;
                         const data = await res.json();
                         const rawContent = data.choices[0].message.content.trim();
 
-                        // Parse JSON response for type + content
                         let strategyType = 'strategy';
                         let strategyContent = rawContent;
 
@@ -1300,7 +1305,6 @@ ${transcript}`;
                                 strategyContent = parsed.content;
                             }
                         } catch {
-                            // If JSON parse fails, use raw content as-is (graceful fallback)
                             console.warn('Synthesis JSON parse failed, using raw markdown');
                         }
 
