@@ -23,33 +23,197 @@
         /* ═══════════════════════════════════════════════════
          *  DESIGN SYSTEM — Editorial / RemapHQ aesthetic
          * ═══════════════════════════════════════════════════ */
+        /* ═══════════════════════════════════════════════════════
+CSS CUSTOM PROPERTIES
+═══════════════════════════════════════════════════════ */
         :root {
+            /* ── Primary palette (structure, type, backgrounds) ── */
             --bg: #FAF8F3;
+            /* Warm white — page background */
             --surface: #F2EDE5;
+            /* Light stone — cards, subtle sections */
             --mid: #C9A96E;
+            /* Honey oak — borders, dividers, accents */
             --text: #33302B;
+            /* Warm charcoal — headlines, body copy */
             --text-muted: #6B6560;
-            --text-light: #9B9590;
+            /* Muted charcoal — secondary text */
             --dark-surface: #1C1C1E;
+            /* Near black — one dark section */
+
+            /* ── Secondary palette (interactive, accent, alive) ── */
             --action: #C99A18;
+            /* Pitcher yellow — buttons, primary CTA */
             --action-hover: #B08816;
+            /* Darker yellow — hover state */
             --action-focus: rgba(201, 154, 24, 0.25);
+            /* Yellow focus ring */
             --secondary: #4A6FA5;
+            /* Jacket blue — tabs, link hovers */
+            --secondary-hover: #3D5E8C;
+            /* Darker blue — hover state */
             --highlight: #E8567F;
+            /* Sticky pink — notifications, live tags */
             --tertiary: #189E48;
-            --font-sans: 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-serif: 'Noto Serif', Georgia, 'Times New Roman', serif;
+            /* Marker green — success, tertiary */
+
+
+            .service-row.strategy span.material-symbols-outlined.service-arrow {
+                color: var(--action);
+            }
+
+            .service-row.automation span.material-symbols-outlined.service-arrow {
+                color: var(--highlight);
+            }
+
+            .service-row.product span.material-symbols-outlined.service-arrow {
+                color: var(--tertiary);
+            }
+
+
+            /* ── Typography ── */
+            --font-sans: 'Noto Sans',
+            -apple-system,
+            BlinkMacSystemFont,
+            sans-serif;
+            --font-serif: 'Noto Serif',
+            Georgia,
+            'Times New Roman',
+            serif;
+
+            /* ── Type scale (editorial, not corporate) ── */
+            --text-xxs: 0.70rem;
+            /* 11px — microcopy, ux copy */
+            --text-xs: 0.8125rem;
+            /* 13px — fine print, credits */
+            --text-sm: 0.875rem;
+            /* 14px — captions, labels */
             --text-base: 1.0625rem;
+            /* 17px — body copy */
+            --text-lg: 1.1875rem;
+            /* 19px — lead paragraphs */
+            --text-xl: 1.375rem;
+            /* 22px — h3, subheadings */
+            --text-2xl: 1.75rem;
+            /* 28px — h2, section headings */
+            --text-3xl: 2.5rem;
+            /* 40px — h1, hero (mobile) */
+            --text-4xl: 3.25rem;
+            /* 52px — h1, hero (desktop) */
+
+            /* ── Spacing tokens ── */
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2.5rem;
+            --space-xl: 4rem;
+            --space-2xl: 6rem;
+
+
+
+
+
+            /* ═══════════════════════════════════════════════════════
+ PICO CSS OVERRIDES
+ ═══════════════════════════════════════════════════════ */
+
+            /* ── Page ── */
             --pico-font-family: var(--font-sans);
+            --pico-font-family-sans-serif: var(--font-sans);
+            --pico-font-family-serif: var(--font-serif);
             --pico-font-size: var(--text-base);
-            --pico-line-height: 1.8;
+            --pico-line-height: 1.7;
+            --pico-font-weight: 400;
             --pico-background-color: var(--bg);
             --pico-color: var(--text);
-            --pico-primary: var(--dark-surface);
-            --pico-primary-background: var(--dark-surface);
-            --pico-primary-border: var(--dark-surface);
-            --pico-primary-hover: #333;
+
+            /* ── Typography ── */
+            --pico-text-decoration: none;
+            --pico-muted-color: var(--text-muted);
+            --pico-muted-border-color: var(--mid);
+            --pico-h1-color: var(--text);
+            --pico-h2-color: var(--text);
+            --pico-h3-color: var(--text);
+            --pico-h4-color: var(--text);
+            --pico-h5-color: var(--text);
+            --pico-h6-color: var(--text);
+
+            /* ── Primary interactive (buttons, links) ── */
+            --pico-primary: var(--text);
+            --pico-primary-background: var(--text);
+            --pico-primary-border: var(--text);
+            --pico-primary-hover: #4A463E;
+            --pico-primary-hover-background: #4A463E;
+            --pico-primary-hover-border: #4A463E;
+            --pico-primary-focus: rgba(51, 48, 43, 0.25);
+            --pico-primary-inverse: var(--surface);
+            /* text should be light stone */
+            --pico-primary-active-background: #4A463E;
+            --pico-primary-active-border: #4A463E;
+
+            /* ── Secondary interactive ── */
+            --pico-secondary: var(--secondary);
+            --pico-secondary-background: var(--secondary);
+            --pico-secondary-border: var(--secondary);
+            --pico-secondary-hover: var(--secondary-hover);
+            --pico-secondary-hover-background: var(--secondary-hover);
+            --pico-secondary-hover-border: var(--secondary-hover);
+            --pico-secondary-focus: rgba(74, 111, 165, 0.25);
+            --pico-secondary-inverse: var(--bg);
+
+            /* ── Cards and surfaces ── */
+            --pico-card-background-color: var(--surface);
+            --pico-card-sectioning-background-color: var(--surface);
+            --pico-dropdown-background-color: var(--surface);
+            --pico-dropdown-color: var(--text);
+
+            /* ── Shadows & Depth ── */
+            --pico-box-shadow: 0 6px 16px rgba(201, 169, 110, 0.12),
+            0 2px 4px rgba(201, 169, 110, 0.04);
+            --pico-group-box-shadow: var(--pico-box-shadow);
+
+            /* ── Borders ── */
+            --pico-border-color: var(--mid);
+            --pico-border-radius: 100px;
+            --pico-accordion-border-color: var(--mid);
+            --pico-accordion-active-summary-color: var(--action);
+
+            /* ── Blockquotes ── */
+            --pico-blockquote-border-color: var(--mid);
+            --pico-blockquote-color: var(--text);
+            --pico-blockquote-footer-color: var(--text-muted);
+
+            /* ── Form elements ── */
+            --pico-form-element-background-color: var(--bg);
+            --pico-form-element-border-color: var(--mid);
+            --pico-form-element-active-background-color: var(--surface);
+            --pico-form-element-active-border-color: var(--action);
+            --pico-form-element-focus-color: var(--action-focus);
+            --pico-form-element-color: var(--text);
+            --pico-form-element-placeholder-color: var(--text-muted);
+
+            /* ── Table elements ── */
+            --pico-table-border-color: var(--mid);
+            --pico-table-row-stripped-background-color: var(--surface);
+
+            /* ── Code ── */
+            --pico-code-background-color: var(--surface);
+            --pico-code-color: var(--text);
+            --pico-mark-background-color: var(--action-focus);
+            --pico-mark-color: var(--text);
+            --pico-ins-color: var(--tertiary);
+            --pico-del-color: var(--highlight);
+
+            /* ── Selection ── */
+            --pico-text-selection-color: rgba(201, 154, 24, 0.25);
+
+            /* ── HR ── */
+            --pico-hr-border-color: var(--mid);
         }
+
+
+
+
 
         body>footer,
         body>header,
@@ -526,6 +690,30 @@
             padding-bottom: 0.3rem;
 
         }
+
+
+
+        @keyframes input-blink {
+            0% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.6);
+                /* Starts with a tight, slightly opaque blue */
+            }
+
+            50% {
+                box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.1);
+                /* Expands out and fades */
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+                /* Disappears completely */
+            }
+        }
+
+        .blink-attention {
+            animation: input-blink 1.5s ease-out 1;
+            /* Runs exactly once on load */
+        }
     </style>
 </head>
 
@@ -720,14 +908,29 @@
                 </div>
 
                 <!-- ── Input area ─────────────────────────── -->
-                <div class="chat-input-wrapper" x-show="!interviewComplete">
-                    <button id="mic-btn" :class="{ recording: isRecording }" aria-label="Voice input"
-                        @click="toggleRecording()" :disabled="isLoading">
+                <div class="chat-input-wrapper blink-attention" x-show="!interviewComplete">
+
+                    <button title="Click to speak your responses" id="mic-btn" :class="{ recording: isRecording }"
+                        aria-label="Voice input" @click="toggleRecording()" :disabled="isLoading">
                         <span class="material-symbols-outlined" x-show="!isRecording">mic</span>
                         <span class="material-symbols-outlined" x-show="isRecording" x-cloak>stop_circle</span>
                     </button>
-                    <input type="text" placeholder="Type your answer..." x-model="userInput"
-                        @keydown.enter="sendMessage()" :disabled="isLoading">
+
+                    <input type="text" x-ref="chatInput" :placeholder="placeholderText" x-model="userInput"
+                        @keydown.enter="sendMessage()" :disabled="isLoading" x-init="
+            /* 1. Auto-focus with a slight delay to ensure the DOM is ready */
+            setTimeout(() => { $refs.chatInput.focus() }, 100);
+
+            /* 2. Typewriter effect for the placeholder */
+            let targetText = 'Speak or type your answers (we recommend speaking)';
+            let i = 0;
+            let typeInterval = setInterval(() => {
+                placeholderText += targetText.charAt(i);
+                i++;
+                if (i >= targetText.length) clearInterval(typeInterval);
+            }, 45); /* 45ms per character feels natural */
+        ">
+
                     <button id="send-btn" @click="sendMessage()"
                         :disabled="isLoading || !userInput.trim()">Send</button>
                 </div>
@@ -821,6 +1024,7 @@
 
                 /* ── Reactive state ──────────────────────────── */
                 userInput: '',
+                placeholderText: '',
                 messages: [],            // { role: 'user'|'assistant', content }
                 knowledgeBase: [],       // scraped topic items
                 isLoading: false,
@@ -962,6 +1166,7 @@ ${covered || '(none yet)'}`;
 
                     this.messages.push({ role: 'user', content: text });
                     this.userInput = '';
+
                     this.isLoading = true;
                     this.scrollToBottom();
 

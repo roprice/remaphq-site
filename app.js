@@ -97,6 +97,54 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const card = document.querySelector('.agent-cta-card');
+
+    // If the card doesn't exist on this page, stop running the script
+    if (!card) return;
+
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                scrubCardOpacity();
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }, { passive: true });
+
+    function scrubCardOpacity() {
+        const rect = card.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Find the exact vertical center of the card
+        const cardCenterY = rect.top + (rect.height / 2);
+
+        // Calculate normalized position (0.0 at bottom, 0.5 at center, 1.0 at top)
+        let position = (windowHeight - cardCenterY) / windowHeight;
+        position = Math.max(0, Math.min(1, position)); // Keep it between 0 and 1
+
+        let currentOpacity = 0;
+
+        if (position <= 0.5) {
+            // 1st Half: Fade IN (Position 0.0 to 0.5 maps to Opacity 0.0 to 0.9)
+            currentOpacity = position * 1.8;
+        } else {
+            // 2nd Half: Fade OUT (Position 0.5 to 1.0 maps to Opacity 0.9 to 0.2)
+            const progressPastCenter = (position - 0.5) / 0.5; // Scale from 0 to 1
+            currentOpacity = 0.9 - (progressPastCenter * 0.7); // Drop by 0.7 (from 0.9 down to 0.2)
+        }
+
+        // Apply the exact opacity frame-by-frame
+        card.style.opacity = currentOpacity.toFixed(2);
+    }
+
+    // Initialize immediately on load
+    scrubCardOpacity();
+});
+
 // Smart Sticky Header Logic
 document.addEventListener("DOMContentLoaded", () => {
     let lastScrollTop = 0;
