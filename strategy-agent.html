@@ -1229,14 +1229,13 @@ If none were covered, respond with an empty array: []`;
                     const brandObj = this.knowledgeBase.find(q => q.id === 'q1');
                     if (!brandObj || !brandObj.summary) return 'brand';
 
-                    // Strip common preambles like "The brand name is" or "It's called"
                     let name = brandObj.summary
+                        .replace(/^(it'?s\s+)?(called\s+)?/i, '')
                         .replace(/^(the\s+)?(brand\s+)?(name\s+)?(is\s+)?/i, '')
-                        .replace(/\s*[—–-]\s*.+$/, '')  // strip everything after a dash
-                        .replace(/[.,;:!?].*$/, '')      // strip after first punctuation
+                        .replace(/\s*[—–-]\s*.+$/, '')
+                        .replace(/[.,;:!?].*$/, '')
                         .trim();
 
-                    // Take only the first 3 words max
                     name = name.split(/\s+/).slice(0, 3).join(' ');
 
                     return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'brand';
