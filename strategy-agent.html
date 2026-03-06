@@ -798,23 +798,12 @@
     </main>
 
     <script>
-
-        function enableDesignMode() {
-            document.body.setAttribute('contenteditable', 'true');
-            document.body.style.outline = '2px dashed #f00';
-            document.body.style.cursor = 'text';
-            alert('Design mode enabled. Click any text to edit.');
-        }
-
-
         /* ================================================================
          *  CONFIGURATION
          * ================================================================ */
 
         // ── Proxied through n8n (OpenRouter calls) ──
-        const PROXY_ENDPOINT = 'https://my.remaphq.com/webhook/llm-proxy';
-
-
+        const PROXY_ENDPOINT = 'https://my.remap.com/webhook/llm-proxy';
 
         // ── Direct to Groq (keys hardcoded, $10 cap) ──
         const WHISPER_ENDPOINT = 'https://api.groq.com/openai/v1/audio/transcriptions';
@@ -1039,22 +1028,27 @@ ${covered || '(none yet)'}`;
                             .map(q => `${q.id}: ${q.question}`)
                             .join('\n');
 
-                        const lastAgentMsg = agentReply || 'Initial greeting';
                         const shallowMin = parseInt(this.getSetting('shallow-threshold') || '15', 10);
                         const maxFollowups = parseInt(this.getSetting('max-followups') || '3', 10);
 
-                        const checkPrompt = `You are a data extraction assistant. Evaluate the user's latest message in the context of the agent's preceding message. Identify ALL interview topics from the list that the user has substantively discussed or covered in the conversation so far. The user often covers multiple topics at once, sometimes implicitly.
+                        // Build full conversation transcript for context
+                        const conversationHistory = this.messages
+                            .map(m => `${m.role === 'assistant' ? 'AGENT' : 'USER'}: ${m.content}`)
+                            .join('\n\n');
 
-AGENT'S RECENT MESSAGE:
-"${lastAgentMsg}"
+                        const checkPrompt = `You are a data extraction assistant. Review the FULL conversation below between an agent and a user conducting a strategy discovery interview. Identify ALL topics from the uncovered list that have been substantively discussed anywhere in the conversation.
 
-USER'S LATEST MESSAGE:
-"${userMsg}"
+--- FULL CONVERSATION ---
+${conversationHistory}
 
-TOPICS STILL TO COVER:
+--- TOPICS STILL MARKED AS UNCOVERED ---
 ${questionList}
 
-A topic is "covered" when the user has shared enough information for a strategist to work with, even if the user didn't directly address the exact question. Look for implicit coverage through context, examples, and tangential remarks.
+INSTRUCTIONS:
+- A topic is "covered" when the user has shared enough information for a strategist to work with, even if the user didn't directly address the exact question.
+- Look for IMPLICIT coverage: the user may answer a question about trigger events while responding to a question about pain points, or reveal the decision maker while describing the ideal customer.
+- Be aggressive about marking topics covered. If there is enough material in the conversation to write a meaningful sentence about the topic, it is covered.
+- For each covered topic, write a brief summary capturing the substance of what was discussed.
 
 Respond ONLY with a JSON array of objects for each topic that was substantively discussed, like:
 [{"id":"q1","summary":"brief summary of what was discussed"}]
