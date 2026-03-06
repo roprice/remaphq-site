@@ -488,7 +488,7 @@
             font-size: 0.85rem;
             font-weight: 500;
             transition: opacity 0.2s;
-            max-width: 300px;
+            max-width: 350px;
         }
 
         .download-btn:hover {
@@ -1227,8 +1227,19 @@ If none were covered, respond with an empty array: []`;
                 /** Build safe filename prefix from brand name */
                 _safeBrandName() {
                     const brandObj = this.knowledgeBase.find(q => q.id === 'q1');
-                    const rawName = brandObj && brandObj.summary ? brandObj.summary : 'brand';
-                    return rawName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                    if (!brandObj || !brandObj.summary) return 'brand';
+
+                    // Strip common preambles like "The brand name is" or "It's called"
+                    let name = brandObj.summary
+                        .replace(/^(the\s+)?(brand\s+)?(name\s+)?(is\s+)?/i, '')
+                        .replace(/\s*[—–-]\s*.+$/, '')  // strip everything after a dash
+                        .replace(/[.,;:!?].*$/, '')      // strip after first punctuation
+                        .trim();
+
+                    // Take only the first 3 words max
+                    name = name.split(/\s+/).slice(0, 3).join(' ');
+
+                    return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'brand';
                 },
 
                 /** Download the raw chat transcript */
@@ -1250,7 +1261,18 @@ If none were covered, respond with an empty array: []`;
                 /** Generate strategy.md via LLM synthesis, then download */
                 async generateAndDownloadStrategy() {
                     this.isGeneratingStrategy = true;
-
+                    try {
+                        const cleaned = rawContent
+                            .replace(/^[\s\S]*?```(?:json)?\s*\n?/, '')
+                            .replace(/\n?\s*```[\s\S]*$/, '');
+                        const parsed = JSON.parse(cleaned);
+                        if (parsed.type && parsed.content) {
+                            strategyType = parsed.type;
+                            strategyContent = parsed.content;
+                        }
+                    } catch {
+                        console.warn('Synthesis JSON parse failed, using raw markdown');
+                    }
                     try {
                         const coveredData = this.knowledgeBase
                             .filter(q => q.covered)
