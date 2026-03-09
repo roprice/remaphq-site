@@ -75,7 +75,25 @@
               <span>Content Operations</span></span>
             <span class="domain-pill"><span class="domain-pill-dot" style="color: rgb(201, 154, 24);">●</span>
               <span>RevOps Automation</span></span>
-            <span class="domain-pill"><span class="domain-pill-dot" style="color: rgb(24, 158, 72);">●</span> <span>AI Strategy Agent</span></span>
+            <span class="domain-pill" style="position: relative;" x-data="{ open: false }" @mouseenter="open = true"
+              @mouseleave="open = false">
+              <span class="domain-pill-dot" style="color: rgb(24, 158, 72);">●</span>
+
+              <a href="#ai-strategy-agent" class="domain-pill">
+                <span>AI Strategy Agent</span>
+              </a>
+
+              <div class="tooltip-container" x-show="open" x-transition:enter="tooltip-enter-active"
+                x-transition:enter-start="tooltip-enter-start" x-transition:enter-end="tooltip-enter-end"
+                x-transition:leave="tooltip-leave-active" x-transition:leave-start="tooltip-leave-start"
+                x-transition:leave-end="tooltip-leave-end" style="display: none;">
+                <div class="tooltip-box">
+                  <div class="tooltip-arrow"></div>
+                  We turned our discovery interview approach into an AI strategy agent - get a strategy.md in 15
+                  minutes!
+                </div>
+              </div>
+            </span>
           </span>
           <div class="hero-CTA">
             <button @click.prevent="bookingModalOpen = true" class="btn-primary">Book a call</button>
@@ -86,7 +104,7 @@
 
     <section class="kinfolk-container">
       <div class="kinfolk-parallax-image"></div>
-
+      <div class="anchor" id="ai-strategy-agent"></div>
       <div class="agent-cta-card">
         <div class="card-content">
           <span class="tool-badge"><span class="domain-pill-dot" style="color: rgb(201, 169, 110);">●</span>

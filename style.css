@@ -822,6 +822,23 @@ DOMAIN PILLS — solid light stone background, no border
 }
 
 
+.domain-pill a {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    color: var(--text) !important;
+    text-decoration-color: var(--text);
+    padding-right: 3px;
+}
+
+.domain-pill a:hover {
+    color: var(--secondary-hover) !important;
+    text-decoration-color: var(--secondary-hover);
+}
+
+
+
+
 
 
 
@@ -924,7 +941,79 @@ KINFOLK PARALLAX CLIP REVEAL
     overflow: hidden;
 }
 
+#ai-strategy-agent {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    visibility: hidden;
+}
 
+/* --- Tooltip Wrapper & Positioning --- */
+.tooltip-wrapper {
+    position: relative;
+    display: inline-flex;
+}
+
+.tooltip-container {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 12px;
+    z-index: 10000;
+}
+
+.tooltip-box {
+    background: var(--surface, #ffffff);
+    color: var(--text, #333333);
+    padding: 0.7rem 0.6rem .8rem 0.7rem;
+    border-radius: 8px;
+    font-size: var(--text-xs);
+    width: max-content;
+    max-width: 250px;
+    text-align: left;
+    white-space: normal;
+    line-height: 1.5;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    cursor: default;
+}
+
+.tooltip-arrow {
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: inherit;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Lengthened duration and softer cubic-bezier for a buttery smooth ease-in */
+.tooltip-enter-active {
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.tooltip-leave-active {
+    transition: all 0.3s cubic-bezier(0.4, 0, 1, 1);
+}
+
+.tooltip-enter-start,
+.tooltip-leave-end {
+    opacity: 0;
+    transform: translateX(-50%) translateY(12px) !important;
+}
+
+.tooltip-enter-end,
+.tooltip-leave-start {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) !important;
+}
 
 .agent-cta-card {
     position: relative;
