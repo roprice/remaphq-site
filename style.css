@@ -958,11 +958,18 @@ KINFOLK PARALLAX CLIP REVEAL
 
 .tooltip-container {
     position: absolute;
-    top: 100%;
+    top: 132%;
     left: 50%;
     transform: translateX(-50%);
-    padding-top: 12px;
+    padding: 0.6rem 0.2rem 0.7rem 0.9rem;
     z-index: 10000;
+    width: 270px;
+    height: fit-content;
+    white-space: normal;
+    background: var(--surface);
+    display: block !important;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
 }
 
 .tooltip-box {
