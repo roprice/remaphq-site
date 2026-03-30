@@ -13,7 +13,7 @@
 		href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;family=Noto+Serif:ital,wght@1,400;1,700&amp;display=swap"
 		rel="stylesheet">
 	<link rel="stylesheet"
-		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Noto+Sans+Mono:wght@400;500">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 
 	<link rel="stylesheet" href="style.css">
@@ -97,6 +97,26 @@
 					<!-- CONTENT: detail paragraph(s) — ~60-100 words each, one idea per paragraph -->
 					<p>Use this paragraph to expand on a specific aspect of the above. Name any third parties, technologies, or policies involved. State what you do and don't do with user data or rights. Be specific.</p>
 
+					<!-- CONTENT: code block — use for markdown, prompts, citations, or preformatted text -->
+					<pre class="code-block">
+					# Privacy policy
+
+					We **do not** collect personal information through forms or direct input.
+
+					## Tracking technologies
+
+					We use Google and Meta pixels to understand traffic and serve retargeting ads.
+					If you accept these cookies, you may see Remap ads based on your visit.
+
+					- Your data is anonymized
+					- We do not share it with third-party advertisers
+
+					## Your rights
+
+					We comply with GDPR. You can opt out of non-essential cookies at any time
+					using the buttons below.
+					</pre>
+
 					<!-- CONTENT: compliance/opt-out paragraph — include if page involves data, consent, or legal standing -->
 					<p>State the applicable regulation or standard (e.g., GDPR, CCPA). Explain how users can exercise their rights or preferences. Keep this actionable: tell them exactly what to do.</p>
 
@@ -106,13 +126,13 @@
 						<div class="button-wrapper">
 							<button class="primary-button" style="margin-right:10px">
 								<!-- CONTENT: affirmative action label, ~3-5 words, e.g. "Accept tracking cookies" -->
-								Accept and continue
+								Primary CTA
 							</button>
 						</div>
 						<div class="button-wrapper">
-							<button class="primary-button" style="margin-left:10px">
+							<button class="secondary-button" style="margin-left:10px">
 								<!-- CONTENT: decline/alternative action label, ~3-5 words, e.g. "Decline tracking cookies" -->
-								Decline optional features
+								Secondary CTA
 							</button>
 						</div>
 					</div>

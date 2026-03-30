@@ -1,0 +1,285 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Remap, case study title here</title>
+	<meta name="description" content="Brief description for search engines and link previews, 150 chars max">
+	<meta property="og:title" content="Case study title here">
+	<meta property="og:description" content="Same brief description">
+	<meta property="og:type" content="article">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;family=Noto+Serif:ital,wght@1,400;1,700&amp;display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Noto+Sans+Mono:wght@400;500">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+
+	<!-- NOTE: case study page lives in /case-studies/ so paths go up one level -->
+	<link rel="stylesheet" href="../style.css">
+	<script defer="" src="../app.js"></script>
+	<script defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+	<script defer src="https://umami.remaphq.com/script.js"
+		data-website-id="e5e0fb61-8ec9-4e8c-be8d-d75de1f8e8aa"></script>
+</head>
+
+<body x-data="siteData()" class="page">
+	<svg style="width: 0; height: 0; position: absolute;" aria-hidden="true" focusable="false">
+		<filter id="marker-smudge" x="-20%" y="-20%" width="140%" height="140%">
+			<feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" result="noise"></feTurbulence>
+			<feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G">
+			</feDisplacementMap>
+		</filter>
+	</svg>
+
+	<header style="width: 100%; ">
+		<nav class="site-nav">
+			<div class="nav-left">
+				<details class="dropdown">
+					<summary class="nav-link">
+						Solutions
+					</summary>
+					<ul class="dropdown -menu">
+						<li><a href="/#services" style="color: var(--text);">Strategy &amp; AI Consulting</a></li>
+						<li><a href="/#services" style="color: var(--text);">Marketing Automation</a></li>
+						<li><a href="/#services" style="color: var(--text);">AI Product Transformation</a></li>
+						<li><a href="/#publishing-platform" style="color: var(--text);">Remap Publishing Platform</a></li>
+					</ul>
+				</details>
+				<a href="/#about" class="nav-link">About</a>
+				<a href="/#faq" class="nav-link">FAQ</a>
+			</div>
+			<div class="nav-center">
+				<a href="/" class="wordmark">Remap</a>
+			</div>
+			<div class="nav-right">
+				<a href="/#publishing-platform" class="nav-status" style="text-decoration: none;">
+					<span class="nav-status-dot">●</span> 2 spots open · Mar '26
+				</a>
+				<button @click="bookingModalOpen = true" class="btn-primary" style="margin-bottom: 0;">Book a
+					call</button>
+			</div>
+		</nav>
+	</header>
+
+	<main class="container">
+
+		<!-- HERO ============================================================ -->
+		<div class="section hero">
+			<div class="section-inner">
+				<span class="case-study-tag">AI operations</span>
+				<h1>Case study title goes here</h1>
+				<h3>How I directed an AI agent through a complex production task, and what it reveals about the skills that matter in 2026</h3>
+				<p class="page-meta">
+					March 2026<span class="meta-separator">·</span>Rowan Price<span class="meta-separator">·</span>12 min read
+				</p>
+			</div>
+		</div>
+
+		<!-- BODY CONTENT ==================================================== -->
+		<div class="section content-body">
+			<div class="section-inner">
+				<div class="narrow-paragraph">
+
+					<!-- SAMPLE: intro prose -->
+					<p>Opening paragraph sets up the context. What was the task, why did it matter, what's at stake. Keep it concrete and skip the throat-clearing. The reader should know within two sentences whether this is relevant to them.</p>
+
+					<p>Second paragraph can establish the technical environment or constraints. Name the tools involved and the human/agent dynamic without over-explaining.</p>
+
+					<hr class="section-break">
+
+					<!-- ============================================================
+					     PATTERN: transcript block
+					     Use for Discord, Slack, or LLM chat excerpts.
+					     Each message gets a .transcript-message with a speaker label.
+					     Speaker variants: .speaker-rowan, .speaker-agent, .speaker-other
+					     ============================================================ -->
+
+					<div class="transcript">
+						<div class="transcript-message">
+							<span class="transcript-speaker speaker-rowan">rowan</span>
+							<p>Before you start the full run, here are the updated specs. Let me know if you have any questions.</p>
+						</div>
+
+						<div class="transcript-message">
+							<span class="transcript-speaker speaker-agent">daniel (AI agent)</span>
+							<p>Got the updated spec. Noted these changes: categories split into browse-by-page vs keyword search, naming is now 1-indexed, "Health &amp; Fitness" replacing previous variations.</p>
+							<p>No questions on the spec itself. It's clear.</p>
+						</div>
+
+						<div class="transcript-message">
+							<span class="transcript-speaker speaker-other">vince</span>
+							<p>Daniel, what do you need from me in order to make this happen?</p>
+						</div>
+					</div>
+
+					<!-- ============================================================
+					     PATTERN: annotation block
+					     Your commentary on the transcript above. This is where the
+					     value lives - explaining WHY you made a decision, what skill
+					     it demonstrates, and what would have gone wrong otherwise.
+
+					     The annotation-label is optional but useful for naming the
+					     skill being demonstrated. Skill tags go inside the label or
+					     inside annotation prose.
+					     ============================================================ -->
+
+					<div class="annotation">
+						<span class="annotation-label"><span class="skill-tag">Specification precision</span> Catching assumptions before they compound</span>
+						<p>Notice what's happening here. The agent confirmed the spec changes correctly, but I haven't told it to start yet. This is intentional. I need to see that the agent parsed the spec the way I intended before it burns through 400 API calls. If there's a misunderstanding, it costs me 30 seconds now versus an hour of wrong output later.</p>
+						<p>This is the difference between prompting and specification management. Prompting is getting the first response right. Specification management is making sure the agent stays aligned across a multi-step workflow.</p>
+					</div>
+
+					<!-- SAMPLE: connecting prose between transcript sections -->
+					<p>With the spec confirmed, the next question was infrastructure. Where do 400 images go? The agent proposed several options, each with different tradeoffs.</p>
+
+					<!-- Another transcript block -->
+					<div class="transcript">
+						<div class="transcript-message">
+							<span class="transcript-speaker speaker-agent">daniel (AI agent)</span>
+							<p>My recommendation: OneDrive if Vince has it set up, otherwise local-then-transfer.</p>
+						</div>
+
+						<div class="transcript-message">
+							<span class="transcript-speaker speaker-rowan">rowan</span>
+							<p>We're going to have you store the images directly on the Denmori server as you go. To set that up, I need your public SSH key.</p>
+						</div>
+					</div>
+
+					<div class="annotation">
+						<span class="annotation-label"><span class="skill-tag">Trust &amp; security design</span> Access control as a design decision</span>
+						<p>The agent suggested OneDrive, Google Drive, local storage. I chose none of them. Instead, I gave it SSH access to a dedicated server with a dedicated user, scoped to a single directory. This is access control thinking applied to an AI agent: minimum viable permissions, no credential sharing, auditable path.</p>
+					</div>
+
+					<hr class="section-break">
+
+					<!-- ============================================================
+					     PATTERN: markdown render block
+					     For showing .md file content, strategy docs, specs, or
+					     other structured text that was part of the workflow.
+					     Uses monospace styling within a warm background block.
+					     ============================================================ -->
+
+					<div class="markdown-block">
+						<span class="md-heading"># Phase 1: App Store screenshot sourcing</span>
+
+						We need to source reference images from the Apple App Store.
+						These will be used as visual references for an AI image
+						generation system.
+
+						<span class="md-heading">## What we need</span>
+
+						- 20 categories, 5 apps per category, 4 screenshots per app
+						- Full resolution (request 1290x2796, accept native max)
+						- Naming: {category}/set{n}_image{n}.jpg (1-indexed)
+
+						<span class="md-comment"><!-- This spec was revised twice during the session --></span>
+					</div>
+
+					<div class="annotation">
+						<span class="annotation-label">The spec as a living document</span>
+						<p>This is the final version of the spec. It was revised twice during the conversation based on what we learned from the API test. The first version assumed composite strip images existed as downloadable assets. They don't. The second version assumed we could request arbitrary resolutions. We can, but the CDN caps at native upload size. Each revision was informed by a test, not by guessing.</p>
+					</div>
+
+					<hr class="section-break">
+
+					<!-- SAMPLE: closing prose -->
+					<p>Closing section ties the specific decisions back to the broader skill framework. What patterns transfer to other contexts. What you'd do differently next time. Keep it short.</p>
+
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+	<!-- Footer CTA and footer - same as page-template.html -->
+	<div class="site-anchor">
+		<section id="contact" class="final-cta">
+			<h2>Want to discuss a problem or opportunity in your business?</h2>
+			<p class="cta-supporting">Start with a 20-minute conversation, I'll let you know if I can help </p>
+			<button @click.prevent="bookingModalOpen = true" class="btn-primary">Book a call</button>
+			<p class="cta-email" x-data="{ copied: false }">
+				Prefer email?
+				<a href="#"
+					@click.prevent="navigator.clipboard.writeText('rowan@remaphq.com'); copied = true; setTimeout(() => copied = false, 2000)"
+					:style="copied ? 'color: var(--tertiary); text-decoration: none;' : 'cursor: pointer;'"
+					style="cursor: pointer;">
+					<span x-show="!copied">rowan@remaphq.com</span>
+					<span x-show="copied" style="display: none;">✓ Copied to clipboard</span>
+				</a>
+			</p>
+		</section>
+
+		<footer class="site-footer">
+			<div class="footer-grid">
+				<div class="footer-brand">
+					<a href="/" class="wordmark" style="color: #FAF8F3;">Remap</a>
+					<p>Remap is led by Rowan, a marketing and technology strategist with two decades of experience
+						across brand
+						strategy, CRM consulting, and digital marketing. A former agency owner, Rowan now helps B2B
+						businesses
+						redesign how they work with AI-native automation and strategic consulting.</p>
+					<a href="https://linkedin.com/in/rowanprice" class="social-link">LinkedIn</a>
+				</div>
+
+				<div class="footer-nav">
+					<h4>Our focus</h4>
+					<ul>
+						<li><a href="/#services">AI-native marketing automation</a></li>
+						<li><a href="/#services">n8n-orchestrated solutions</a></li>
+						<li><a href="/#services">Agents that amplify human thinking</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-nav">
+					<h4>How we think</h4>
+					<ul>
+						<li><a href="/#services">Marketing, positioning, and brand strategy</a></li>
+						<li><a href="/#services">AI-first: engineering context and choosing agents vs LLMs</a></li>
+						<li><a href="/#services">Orchestrating product and GTM as one</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-contact">
+					<h4>Contact</h4>
+					<a href="#" x-data="{ copied: false }"
+						@click.prevent="navigator.clipboard.writeText('rowan@remaphq.com'); copied = true; setTimeout(() => copied = false, 2000)"
+						:style="copied ? 'color: var(--tertiary); text-decoration: none;' : 'cursor: pointer;'"
+						style="cursor: pointer;">
+						<span x-show="!copied">rowan@remaphq.com</span>
+						<span x-show="copied" style="display: none;">✓ Copied</span>
+					</a>
+					<p>3439 SE Hawthorne Blvd</p>
+					<p>Portland, OR 97214</p>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<p>© 2026 Remap Holdings LLC | <a href="/privacy-policy.html">Privacy policy</a></p>
+			</div>
+		</footer>
+	</div>
+
+	<dialog x-show="bookingModalOpen" :open="bookingModalOpen" @keydown.escape.window="bookingModalOpen = false"
+		style="display: none;">
+		<article @click.outside="bookingModalOpen = false">
+			<header>
+				<h3 class="booking-calendar-title">Schedule a strategy call</h3>
+				<button aria-label="Close" @click="bookingModalOpen = false">✕</button>
+			</header>
+			<div class="booking-calendar" style="width: 100%; height: 650px; background-color: #ffffff;">
+				<iframe
+					src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2opTI4DLwRH_1VFhOV4lzi1YPdUhM-0sOMOzLgPoIbeUu1D6bfNcTyzN0tr2YtzFP-3sPyB0km"
+					width="100%" height="100%" frameborder="0" style="border: none;">
+				</iframe>
+			</div>
+		</article>
+	</dialog>
+
+</body>
+
+</html>
