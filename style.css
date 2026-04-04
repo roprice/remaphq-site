@@ -1122,6 +1122,7 @@ DESKTOP TYPE SCALE
 @media (min-width: 768px) {
     h1 {
         font-size: var(--text-4xl);
+        margin-top: var(--space-lg);
     }
 
     #hero h1 {
@@ -2090,6 +2091,7 @@ header.header-scrolled {
 
 .nav-status {
     text-decoration: none;
+    visibility: hidden;
 }
 
 .nav-right .btn-primary {
