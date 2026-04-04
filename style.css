@@ -479,7 +479,7 @@ h3,
 h4,
 h5,
 h6 {
-    margin-top: var(--space-xl);
+    margin-top: var(--space-md);
     margin-bottom: var(--space-md);
 }
 
@@ -2392,18 +2392,32 @@ header.header-scrolled {
    Sits below h1 in the hero area
    ========================================================================== */
 
+.page .hero .section-inner {
+
+    margin: auto;
+
+}
+
+
+.page .hero h1,
+.page .hero h2,
+.page .hero h3 {
+    padding: 0 10%;
+    text-align: center;
+}
+
 .page-meta {
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 0.85rem;
-	color: #888;
-	margin-top: -0.5rem;
-	margin-bottom: 1.5rem;
-	letter-spacing: 0.02em;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.85rem;
+    color: #888;
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
 }
 
 .page-meta .meta-separator {
-	margin: 0 0.5em;
-	color: #ccc;
+    margin: 0 0.5em;
+    color: #ccc;
 }
 
 
@@ -2412,17 +2426,17 @@ header.header-scrolled {
    ========================================================================== */
 
 .case-study-tag {
-	display: inline-block;
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 0.7rem;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 0.12em;
-	color: #888;
-	border: 1px solid #ddd;
-	padding: 0.25em 0.75em;
-	border-radius: 2px;
-	margin-bottom: 1rem;
+    display: inline-block;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #888;
+    border: 1px solid #ddd;
+    padding: 0.25em 0.75em;
+    border-radius: 2px;
+    margin-bottom: 1rem;
 }
 
 
@@ -2432,34 +2446,35 @@ header.header-scrolled {
    ========================================================================== */
 
 .annotation {
-	border-left: 3px solid #C9A96E;  /* matches --tertiary / gold accent */
-	padding: 1rem 1.25rem;
-	margin: 1.75rem 0;
-	background: rgba(201, 169, 110, 0.04);
+    border-left: 3px solid #C9A96E;
+    /* matches --tertiary / gold accent */
+    padding: 1rem 1.25rem;
+    margin: 1.75rem 0;
+    background: rgba(201, 169, 110, 0.04);
 }
 
 .annotation-label {
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 0.7rem;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: 0.12em;
-	color: #C9A96E;
-	margin-bottom: 0.5rem;
-	display: block;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #C9A96E;
+    margin-bottom: 0.5rem;
+    display: block;
 }
 
 .annotation p {
-	font-family: 'Noto Serif', serif;
-	font-style: italic;
-	font-size: 0.95rem;
-	line-height: 1.7;
-	color: #444;
-	margin: 0;
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 0;
 }
 
-.annotation p + p {
-	margin-top: 0.75rem;
+.annotation p+p {
+    margin-top: 0.75rem;
 }
 
 
@@ -2468,18 +2483,18 @@ header.header-scrolled {
    ========================================================================== */
 
 .skill-tag {
-	display: inline-block;
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 0.65rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.08em;
-	color: #fff;
-	background: #555;
-	padding: 0.15em 0.5em;
-	border-radius: 2px;
-	vertical-align: middle;
-	margin-right: 0.25em;
+    display: inline-block;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #fff;
+    background: #555;
+    padding: 0.15em 0.5em;
+    border-radius: 2px;
+    vertical-align: middle;
+    margin-right: 0.25em;
 }
 
 
@@ -2489,53 +2504,56 @@ header.header-scrolled {
    ========================================================================== */
 
 .transcript {
-	background: #2A2A2A;
-	border-radius: 4px;
-	padding: 1.5rem;
-	margin: 1.75rem 0;
-	overflow-x: auto;
+    background: #2A2A2A;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin: 1.75rem 0;
+    overflow-x: auto;
 }
 
 .transcript-message {
-	margin-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .transcript-message:last-child {
-	margin-bottom: 0;
+    margin-bottom: 0;
 }
 
 .transcript-speaker {
-	font-family: 'Noto Sans', sans-serif;
-	font-size: 0.8rem;
-	font-weight: 700;
-	color: #ddd;
-	margin-bottom: 0.3rem;
-	display: block;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ddd;
+    margin-bottom: 0.3rem;
+    display: block;
 }
 
 /* Speaker color variants */
 .transcript-speaker.speaker-rowan {
-	color: #C9A96E;  /* gold - you */
+    color: #C9A96E;
+    /* gold - you */
 }
 
 .transcript-speaker.speaker-agent {
-	color: #7DAFCB;  /* blue - AI agent */
+    color: #7DAFCB;
+    /* blue - AI agent */
 }
 
 .transcript-speaker.speaker-other {
-	color: #8FBC8F;  /* green - collaborators */
+    color: #8FBC8F;
+    /* green - collaborators */
 }
 
 .transcript-message p {
-	font-family: 'Noto Sans Mono', 'Noto Sans', monospace;
-	font-size: 0.82rem;
-	line-height: 1.65;
-	color: #ccc;
-	margin: 0;
+    font-family: 'Noto Sans Mono', 'Noto Sans', monospace;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: #ccc;
+    margin: 0;
 }
 
-.transcript-message p + p {
-	margin-top: 0.5rem;
+.transcript-message p+p {
+    margin-top: 0.5rem;
 }
 
 
@@ -2545,30 +2563,30 @@ header.header-scrolled {
    ========================================================================== */
 
 .markdown-block {
-	background: #F5F0E8;
-	border-radius: 4px;
-	padding: 1.5rem;
-	margin: 1.75rem 0;
-	overflow-x: auto;
-	font-family: 'Noto Sans Mono', monospace;
-	font-size: 0.82rem;
-	line-height: 1.65;
-	color: #333;
+    background: #F5F0E8;
+    border-radius: 4px;
+    padding: 1.5rem;
+    margin: 1.75rem 0;
+    overflow-x: auto;
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: #333;
 }
 
 .markdown-block .md-heading {
-	font-weight: 700;
-	color: #222;
-	margin-top: 1rem;
+    font-weight: 700;
+    color: #222;
+    margin-top: 1rem;
 }
 
 .markdown-block .md-heading:first-child {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 .markdown-block .md-comment {
-	color: #888;
-	font-style: italic;
+    color: #888;
+    font-style: italic;
 }
 
 
@@ -2576,7 +2594,7 @@ header.header-scrolled {
    ========================================================================== */
 
 .section-break {
-	border: none;
-	border-top: 1px solid #e0dcd4;
-	margin: 3rem 0;
+    border: none;
+    border-top: 1px solid #e0dcd4;
+    margin: 3rem 0;
 }
