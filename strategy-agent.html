@@ -1,23 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get a strategy.md document | Remap</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
 
     <script defer src="https://unpkg.com/alpinejs@3.12.1/dist/cdn.min.js"></script>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&amp;family=Noto+Serif:ital,wght@1,400;1,700&amp;display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <script defer src="https://umami.remaphq.com/script.js"
         data-website-id="e5e0fb61-8ec9-4e8c-be8d-d75de1f8e8aa"></script>
     <style>
@@ -29,35 +29,34 @@ CSS CUSTOM PROPERTIES
 ═══════════════════════════════════════════════════════ */
         :root {
             /* ── Primary palette (structure, type, backgrounds) ── */
-            --bg: #FAF8F3;
+            --bg: #faf8f3;
             /* Warm white — page background */
-            --surface: #F2EDE5;
+            --surface: #f2ede5;
             /* Light stone — cards, subtle sections */
-            --mid: #C9A96E;
+            --mid: #c9a96e;
             /* Honey oak — borders, dividers, accents */
-            --text: #33302B;
+            --text: #33302b;
             /* Warm charcoal — headlines, body copy */
-            --text-muted: #6B6560;
+            --text-muted: #6b6560;
             /* Muted charcoal — secondary text */
-            --dark-surface: #1C1C1E;
+            --dark-surface: #1c1c1e;
             /* Near black — one dark section */
 
             /* ── Secondary palette (interactive, accent, alive) ── */
-            --action: #C99A18;
+            --action: #c99a18;
             /* Pitcher yellow — buttons, primary CTA */
-            --action-hover: #B08816;
+            --action-hover: #b08816;
             /* Darker yellow — hover state */
             --action-focus: rgba(201, 154, 24, 0.25);
             /* Yellow focus ring */
-            --secondary: #4A6FA5;
+            --secondary: #4a6fa5;
             /* Jacket blue — tabs, link hovers */
-            --secondary-hover: #3D5E8C;
+            --secondary-hover: #3d5e8c;
             /* Darker blue — hover state */
-            --highlight: #E8567F;
+            --highlight: #e8567f;
             /* Sticky pink — notifications, live tags */
-            --tertiary: #189E48;
+            --tertiary: #189e48;
             /* Marker green — success, tertiary */
-
 
             .service-row.strategy span.material-symbols-outlined.service-arrow {
                 color: var(--action);
@@ -71,19 +70,18 @@ CSS CUSTOM PROPERTIES
                 color: var(--tertiary);
             }
 
-
             /* ── Typography ── */
-            --font-sans: 'Noto Sans',
+            --font-sans: "Noto Sans",
             -apple-system,
             BlinkMacSystemFont,
             sans-serif;
-            --font-serif: 'Noto Serif',
+            --font-serif: "Noto Serif",
             Georgia,
-            'Times New Roman',
+            "Times New Roman",
             serif;
 
             /* ── Type scale (editorial, not corporate) ── */
-            --text-xxs: 0.70rem;
+            --text-xxs: 0.7rem;
             /* 11px — microcopy, ux copy */
             --text-xs: 0.8125rem;
             /* 13px — fine print, credits */
@@ -109,10 +107,6 @@ CSS CUSTOM PROPERTIES
             --space-lg: 2.5rem;
             --space-xl: 4rem;
             --space-2xl: 6rem;
-
-
-
-
 
             /* ═══════════════════════════════════════════════════════
  PICO CSS OVERRIDES
@@ -143,14 +137,14 @@ CSS CUSTOM PROPERTIES
             --pico-primary: var(--text);
             --pico-primary-background: var(--text);
             --pico-primary-border: var(--text);
-            --pico-primary-hover: #4A463E;
-            --pico-primary-hover-background: #4A463E;
-            --pico-primary-hover-border: #4A463E;
+            --pico-primary-hover: #4a463e;
+            --pico-primary-hover-background: #4a463e;
+            --pico-primary-hover-border: #4a463e;
             --pico-primary-focus: rgba(51, 48, 43, 0.25);
             --pico-primary-inverse: var(--surface);
             /* text should be light stone */
-            --pico-primary-active-background: #4A463E;
-            --pico-primary-active-border: #4A463E;
+            --pico-primary-active-background: #4a463e;
+            --pico-primary-active-border: #4a463e;
 
             /* ── Secondary interactive ── */
             --pico-secondary: var(--secondary);
@@ -212,10 +206,6 @@ CSS CUSTOM PROPERTIES
             --pico-hr-border-color: var(--mid);
         }
 
-
-
-
-
         body>footer,
         body>header,
         body>main {
@@ -233,9 +223,7 @@ CSS CUSTOM PROPERTIES
         }
 
         .page-header {
-
             text-align: center;
-
         }
 
         .wordmark {
@@ -370,7 +358,9 @@ CSS CUSTOM PROPERTIES
             font-weight: 400;
             color: var(--text-muted);
             letter-spacing: 0.02em;
-            transition: color 0.2s, font-weight 0.2s;
+            transition:
+                color 0.2s,
+                font-weight 0.2s;
         }
 
         .sidebar-category-head.active .cat-name {
@@ -472,13 +462,12 @@ CSS CUSTOM PROPERTIES
             font-size: 0.8rem;
             color: var(--text);
             font-style: normal;
-            background: #F2EDE5;
+            background: #f2ede5;
             padding: 1rem;
             border-radius: 0.5rem;
         }
 
         .msg-user .msg-body {
-
             font-size: 0.8rem;
             color: var(--text);
             font-style: normal;
@@ -493,7 +482,7 @@ CSS CUSTOM PROPERTIES
         }
 
         .loading-indicator::after {
-            content: '';
+            content: "";
             animation: dots 1.5s steps(4, end) infinite;
         }
 
@@ -501,20 +490,20 @@ CSS CUSTOM PROPERTIES
 
             0%,
             20% {
-                content: '';
+                content: "";
             }
 
             40% {
-                content: '.';
+                content: ".";
             }
 
             60% {
-                content: '..';
+                content: "..";
             }
 
             80%,
             100% {
-                content: '...';
+                content: "...";
             }
         }
 
@@ -577,7 +566,11 @@ CSS CUSTOM PROPERTIES
         }
 
         .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-variation-settings:
+                "FILL" 0,
+                "wght" 400,
+                "GRAD" 0,
+                "opsz" 24;
             font-size: 24px;
         }
 
@@ -689,10 +682,7 @@ CSS CUSTOM PROPERTIES
             color: var(--text-muted);
             margin-bottom: 0.5rem;
             padding-bottom: 0.3rem;
-
         }
-
-
 
         @keyframes input-blink {
             0% {
@@ -719,126 +709,217 @@ CSS CUSTOM PROPERTIES
 </head>
 
 <body>
-
     <main id="chat-container" x-data="agentInterface()">
-
         <div class="page-header">
-
-
             <a href="/" class="wordmark">Remap</a>
-
-
         </div>
 
         <!-- ══════════════════════════════════════════════════
              DOM CONFIG LAYER 1: Agent settings
              ══════════════════════════════════════════════════ -->
-        <div id="agent-config" class="admin-visible" style="display: none;">
+        <div id="agent-config" class="admin-visible" style="display: none">
             <h1>Agent Config</h1>
-            <p>By editing these values, below, you can configure the agent in real time. The values are read from the
-                DOM and sent to the agent.</p>
-            <p>To make edits, <span style="text-decoration: underline; cursor: pointer;"
-                    onclick="enableDesignMode()">enable design mode</span> and edit the values directly in the DOM.</p>
+            <p>
+                By editing these values, below, you can configure the agent
+                in real time. The values are read from the DOM and sent to
+                the agent.
+            </p>
+            <p>
+                To make edits,
+                <span style="text-decoration: underline; cursor: pointer" onclick="enableDesignMode()">enable design
+                    mode</span>
+                and edit the values directly in the DOM.
+            </p>
         </div>
 
-        <div id="agent-settings" class="admin-visible" style="display: none;">
+        <div id="agent-settings" class="admin-visible" style="display: none">
             <span class="panel-label">Agent settings</span>
-            <div class="config-item" data-id="max-followups" data-value="3">Max follow-ups per topic: 3</div>
-            <div class="config-item" data-id="shallow-threshold" data-value="15">Shallow answer word minimum: 15</div>
-            <div class="config-item" data-id="default-model" data-value="anthropic/claude-sonnet-4.6">Default chat
-                model: anthropic/claude-sonnet-4.6</div>
-            <div class="config-item" data-id="checklist-model" data-value="anthropic/claude-opus-4.6">Checklist model:
-                anthropic/claude-opus-4.6</div>
-            <div class="config-item" data-id="synthesis-model" data-value="anthropic/claude-sonnet-4.6">Synthesis model:
-                anthropic/claude-sonnet-4.6</div>
+            <div class="config-item" data-id="max-followups" data-value="3">
+                Max follow-ups per topic: 3
+            </div>
+            <div class="config-item" data-id="shallow-threshold" data-value="15">
+                Shallow answer word minimum: 15
+            </div>
+            <div class="config-item" data-id="default-model" data-value="anthropic/claude-sonnet-4.6">
+                Default chat model: anthropic/claude-sonnet-4.6
+            </div>
+            <div class="config-item" data-id="checklist-model" data-value="anthropic/claude-opus-4.6">
+                Checklist model: anthropic/claude-opus-4.6
+            </div>
+            <div class="config-item" data-id="synthesis-model" data-value="anthropic/claude-sonnet-4.6">
+                Synthesis model: anthropic/claude-sonnet-4.6
+            </div>
         </div>
 
         <!-- ══════════════════════════════════════════════════
              DOM CONFIG LAYER 2: Interview approach
              ══════════════════════════════════════════════════ -->
-        <div id="interview-approach" class="admin-visible" style="display: none;">
+        <div id="interview-approach" class="admin-visible" style="display: none">
             <span class="panel-label">Interview approach</span>
-            <div class="config-item" data-id="persona">You are a STRATEGY CONSULTANT having a conversation. You are NOT
-                a copywriter, NOT a form, NOT a survey.</div>
-            <div class="config-item" data-id="one-question">Ask exactly ONE question per response. Never two.</div>
-            <div class="config-item" data-id="filler">INTELLIGENT USE OF FILLER: Use filler phrases like "Got it,"
-                "Understood," "Great," or "Makes sense." in a measured way. For example, only say "Makes sense" if it
-                truly does make sense.</div>
-            <div class="config-item" data-id="bridges">USE CONTEXT BRIDGES: Prove you listened by using a seamless,
-                2-to-5 word bridge that references their specific answer (e.g., "Since they're non-technical...", "Given
-                that GitHub headache...", "If speed is the priority...") and then immediately ask your next question.
+            <div class="config-item" data-id="persona">
+                You are a STRATEGY CONSULTANT having a conversation. You are
+                NOT a copywriter, NOT a form, NOT a survey.
             </div>
-            <div class="config-item" data-id="no-summary">NEVER summarize or repeat the user's previous answer.</div>
-            <div class="config-item" data-id="brevity">Keep all responses, especially follow-ups, extremely brief. Aim
-                for 5-20 words as needed.</div>
-            <div class="config-item" data-id="efficiency">EFFICIENCY IS PARAMOUNT: Cover multiple checklist items in a
-                single exchange when the user's answer touches on them. Aggressively extract implicit coverage.</div>
-            <div class="config-item" data-id="accept-move-on">If the user gives a substantive answer, ACCEPT IT AND MOVE
-                ON. Do not ask them to refine, wordsmith, or boil it down to a tagline. That is your job later.</div>
-            <div class="config-item" data-id="followup-rules">Follow-ups are for vague answers, answers you don't
-                understand, or answers where you think there might be more to the story. Ask direct, punchy follow-up
-                questions without preamble. Most topics should resolve in 1 or 2 exchanges.</div>
-            <div class="config-item" data-id="no-polish">NEVER ask the user to "capture it in one sentence" or "give me
-                the single phrase." You are mining for strategic raw material, not polished copy.</div>
-            <div class="config-item" data-id="completion">When ALL 22 items are covered, congratulate the user and tell
-                them they can now download their deliverables.</div>
+            <div class="config-item" data-id="one-question">
+                Ask exactly ONE question per response. Never two.
+            </div>
+            <div class="config-item" data-id="filler">
+                INTELLIGENT USE OF FILLER: Use filler phrases like "Got it,"
+                "Understood," "Great," or "Makes sense." in a measured way.
+                For example, only say "Makes sense" if it truly does make
+                sense.
+            </div>
+            <div class="config-item" data-id="bridges">
+                USE CONTEXT BRIDGES: Prove you listened by using a seamless,
+                2-to-5 word bridge that references their specific answer
+                (e.g., "Since they're non-technical...", "Given that GitHub
+                headache...", "If speed is the priority...") and then
+                immediately ask your next question.
+            </div>
+            <div class="config-item" data-id="no-summary">
+                NEVER summarize or repeat the user's previous answer.
+            </div>
+            <div class="config-item" data-id="brevity">
+                Keep all responses, especially follow-ups, extremely brief.
+                Aim for 5-20 words as needed.
+            </div>
+            <div class="config-item" data-id="efficiency">
+                EFFICIENCY IS PARAMOUNT: Cover multiple checklist items in a
+                single exchange when the user's answer touches on them.
+                Aggressively extract implicit coverage.
+            </div>
+            <div class="config-item" data-id="accept-move-on">
+                If the user gives a substantive answer, ACCEPT IT AND MOVE
+                ON. Do not ask them to refine, wordsmith, or boil it down to
+                a tagline. That is your job later.
+            </div>
+            <div class="config-item" data-id="followup-rules">
+                Follow-ups are for vague answers, answers you don't
+                understand, or answers where you think there might be more
+                to the story. Ask direct, punchy follow-up questions without
+                preamble. Most topics should resolve in 1 or 2 exchanges.
+            </div>
+            <div class="config-item" data-id="no-polish">
+                NEVER ask the user to "capture it in one sentence" or "give
+                me the single phrase." You are mining for strategic raw
+                material, not polished copy.
+            </div>
+            <div class="config-item" data-id="completion">
+                When ALL 22 items are covered, congratulate the user and
+                tell them they can now download their deliverables.
+            </div>
         </div>
 
         <!-- ══════════════════════════════════════════════════
              DOM CONFIG LAYER 3: Synthesis template
              ══════════════════════════════════════════════════ -->
-        <div id="synthesis-template" class="admin-visible" style="display: none;">
+        <div id="synthesis-template" class="admin-visible" style="display: none">
             <span class="panel-label">Synthesis template</span>
-            <div class="config-item" data-id="preamble">You are a strategy consultant who has just completed a discovery
-                interview. Using the interview data below, generate a comprehensive strategy.md file suitable for use as
-                a context file in advanced LLM workflows (Gemini, Claude, etc.).</div>
-            <div class="config-item" data-id="type-rules">First, determine the strategy type based on the interview
-                data. PRODUCT: A specific software tool, app, physical product, or productized service with fixed scope
-                and pricing. SERVICES: A consultancy, agency, freelance practice, or professional services firm where
-                delivery is customized. BRAND: A corporate identity, holding company, or umbrella brand spanning
-                multiple offerings.</div>
-            <div class="config-item" data-id="output-format">Output a JSON object with two keys: "type" (one of
-                "product", "services", or "brand") and "content" (the full Markdown strategy document). Output ONLY the
-                JSON, no other text.</div>
-            <div class="config-item" data-id="s1" data-section="1">[Type] overview: Name, mission, why it exists</div>
-            <div class="config-item" data-id="s2" data-section="2">Positioning statement: For [audience], [name] is the
-                [category] that [key benefit] because [reasons to believe]</div>
-            <div class="config-item" data-id="s3" data-section="3">Target audience persona</div>
-            <div class="config-item" data-id="s3-product" data-section="3" data-type="product">PRODUCT: End-user
-                profile, technical comfort level, current workflow and tools</div>
-            <div class="config-item" data-id="s3-services" data-section="3" data-type="services">SERVICES:
-                Decision-maker profile, org size, buying committee dynamics</div>
-            <div class="config-item" data-id="s3-brand" data-section="3" data-type="brand">BRAND: Market segment,
-                psychographic identity, aspirational alignment</div>
-            <div class="config-item" data-id="s4" data-section="4">Core problem and trigger events</div>
-            <div class="config-item" data-id="s4-product" data-section="4" data-type="product">PRODUCT: Workflow
-                friction, tool fatigue, specific feature gaps that trigger evaluation</div>
-            <div class="config-item" data-id="s4-services" data-section="4" data-type="services">SERVICES: Strategic
-                inflection points, capability gaps, failed DIY attempts that trigger outreach</div>
-            <div class="config-item" data-id="s4-brand" data-section="4" data-type="brand">BRAND: Market perception
-                gaps, identity crises, competitive repositioning moments</div>
-            <div class="config-item" data-id="s5" data-section="5">Unique value proposition: Measurable outcome, what
-                sets it apart</div>
-            <div class="config-item" data-id="s6" data-section="6">Competitive landscape</div>
-            <div class="config-item" data-id="s6-product" data-section="6" data-type="product">PRODUCT: Direct
-                competitors, DIY/open-source alternatives, adjacent tools</div>
-            <div class="config-item" data-id="s6-services" data-section="6" data-type="services">SERVICES: Competing
-                firms, in-house hiring as alternative, freelancer marketplaces</div>
-            <div class="config-item" data-id="s6-brand" data-section="6" data-type="brand">BRAND: Category leaders,
-                emerging challengers, substitute categories</div>
-            <div class="config-item" data-id="s7" data-section="7">Solution framing: Income growth, cost reduction, or
-                risk mitigation lens</div>
-            <div class="config-item" data-id="s8" data-section="8">Known limitations and misconceptions</div>
-            <div class="config-item" data-id="s9" data-section="9">Go-to-market and pricing</div>
-            <div class="config-item" data-id="s9-product" data-section="9" data-type="product">PRODUCT: Pricing model,
-                free tier/trial strategy, adoption funnel, conversion triggers</div>
-            <div class="config-item" data-id="s9-services" data-section="9" data-type="services">SERVICES: Engagement
-                model (retainer/project/hybrid), pricing communication strategy, proposal-to-close timeline, top
-                objection and rebuttal</div>
-            <div class="config-item" data-id="s9-brand" data-section="9" data-type="brand">BRAND: Revenue model, brand
-                premium justification, market entry strategy, partnership/channel dynamics</div>
-            <div class="config-item" data-id="s10" data-section="10">How to use this file: Instructions for an AI agent
-                leveraging this as a context file</div>
+            <div class="config-item" data-id="preamble">
+                You are a strategy consultant who has just completed a
+                discovery interview. Using the interview data below,
+                generate a comprehensive strategy.md file suitable for use
+                as a context file in advanced LLM workflows (Gemini, Claude,
+                etc.).
+            </div>
+            <div class="config-item" data-id="type-rules">
+                First, determine the strategy type based on the interview
+                data. PRODUCT: A specific software tool, app, physical
+                product, or productized service with fixed scope and
+                pricing. SERVICES: A consultancy, agency, freelance
+                practice, or professional services firm where delivery is
+                customized. BRAND: A corporate identity, holding company, or
+                umbrella brand spanning multiple offerings.
+            </div>
+            <div class="config-item" data-id="output-format">
+                Output a JSON object with two keys: "type" (one of
+                "product", "services", or "brand") and "content" (the full
+                Markdown strategy document). Output ONLY the JSON, no other
+                text.
+            </div>
+            <div class="config-item" data-id="s1" data-section="1">
+                [Type] overview: Name, mission, why it exists
+            </div>
+            <div class="config-item" data-id="s2" data-section="2">
+                Positioning statement: For [audience], [name] is the
+                [category] that [key benefit] because [reasons to believe]
+            </div>
+            <div class="config-item" data-id="s3" data-section="3">
+                Target audience persona
+            </div>
+            <div class="config-item" data-id="s3-product" data-section="3" data-type="product">
+                PRODUCT: End-user profile, technical comfort level, current
+                workflow and tools
+            </div>
+            <div class="config-item" data-id="s3-services" data-section="3" data-type="services">
+                SERVICES: Decision-maker profile, org size, buying committee
+                dynamics
+            </div>
+            <div class="config-item" data-id="s3-brand" data-section="3" data-type="brand">
+                BRAND: Market segment, psychographic identity, aspirational
+                alignment
+            </div>
+            <div class="config-item" data-id="s4" data-section="4">
+                Core problem and trigger events
+            </div>
+            <div class="config-item" data-id="s4-product" data-section="4" data-type="product">
+                PRODUCT: Workflow friction, tool fatigue, specific feature
+                gaps that trigger evaluation
+            </div>
+            <div class="config-item" data-id="s4-services" data-section="4" data-type="services">
+                SERVICES: Strategic inflection points, capability gaps,
+                failed DIY attempts that trigger outreach
+            </div>
+            <div class="config-item" data-id="s4-brand" data-section="4" data-type="brand">
+                BRAND: Market perception gaps, identity crises, competitive
+                repositioning moments
+            </div>
+            <div class="config-item" data-id="s5" data-section="5">
+                Unique value proposition: Measurable outcome, what sets it
+                apart
+            </div>
+            <div class="config-item" data-id="s6" data-section="6">
+                Competitive landscape
+            </div>
+            <div class="config-item" data-id="s6-product" data-section="6" data-type="product">
+                PRODUCT: Direct competitors, DIY/open-source alternatives,
+                adjacent tools
+            </div>
+            <div class="config-item" data-id="s6-services" data-section="6" data-type="services">
+                SERVICES: Competing firms, in-house hiring as alternative,
+                freelancer marketplaces
+            </div>
+            <div class="config-item" data-id="s6-brand" data-section="6" data-type="brand">
+                BRAND: Category leaders, emerging challengers, substitute
+                categories
+            </div>
+            <div class="config-item" data-id="s7" data-section="7">
+                Solution framing: Income growth, cost reduction, or risk
+                mitigation lens
+            </div>
+            <div class="config-item" data-id="s8" data-section="8">
+                Known limitations and misconceptions
+            </div>
+            <div class="config-item" data-id="s9" data-section="9">
+                Go-to-market and pricing
+            </div>
+            <div class="config-item" data-id="s9-product" data-section="9" data-type="product">
+                PRODUCT: Pricing model, free tier/trial strategy, adoption
+                funnel, conversion triggers
+            </div>
+            <div class="config-item" data-id="s9-services" data-section="9" data-type="services">
+                SERVICES: Engagement model (retainer/project/hybrid),
+                pricing communication strategy, proposal-to-close timeline,
+                top objection and rebuttal
+            </div>
+            <div class="config-item" data-id="s9-brand" data-section="9" data-type="brand">
+                BRAND: Revenue model, brand premium justification, market
+                entry strategy, partnership/channel dynamics
+            </div>
+            <div class="config-item" data-id="s10" data-section="10">
+                How to use this file: Instructions for an AI agent
+                leveraging this as a context file
+            </div>
         </div>
 
         <!-- ══════════════════════════════════════════════════
@@ -846,16 +927,19 @@ CSS CUSTOM PROPERTIES
              ══════════════════════════════════════════════════ -->
         <header class="tool-header">
             <h1>Get a strategy.md doc for your team's AI workflows</h1>
-            <h3 class="subtitle" style="padding:0 2rem">Take the discovery interview below and get a 'strategy.md' file
-                in 15 minutes - works
-                for B2B products,
-                features, service offerings, and umbrella brands</h3>
+            <h3 class="subtitle" style="padding: 0 2rem">
+                Take the discovery interview below and get a 'strategy.md'
+                file in 15 minutes - works for B2B products, features,
+                service offerings, and umbrella brands
+            </h3>
         </header>
 
         <!-- ── Progress ─────────────────────────────────── -->
         <div class="progress-bar-track">
             <div class="progress-bar-fill" :style="'width:' + progressPercent() + '%'"></div>
-            <div class="progress-label" x-text="coveredCount() + ' of 22 topics covered'">0 of 22 topics covered</div>
+            <div class="progress-label" x-text="coveredCount() + ' of 22 topics covered'">
+                0 of 22 topics covered
+            </div>
         </div>
 
         <!-- ── Model selector (user-facing) ─────────────── -->
@@ -869,7 +953,6 @@ CSS CUSTOM PROPERTIES
 
         <!-- ── Two-column layout ────────────────────────── -->
         <div class="interview-layout">
-
             <!-- ── Sidebar: magazine TOC ───────────────── -->
             <div class="sidebar">
                 <template x-for="cat in categories()" :key="cat">
@@ -894,7 +977,6 @@ CSS CUSTOM PROPERTIES
             <!-- ── Chat column ─────────────────────────── -->
             <div class="chat-column">
                 <div id="chat-window" x-ref="chatWindow">
-
                     <template x-for="(msg, idx) in messages" :key="idx">
                         <div>
                             <div :class="'msg msg-' + msg.role">
@@ -905,12 +987,13 @@ CSS CUSTOM PROPERTIES
                     </template>
 
                     <!-- Loading indicator -->
-                    <div class="loading-indicator" x-show="isLoading" x-cloak>Thinking</div>
+                    <div class="loading-indicator" x-show="isLoading" x-cloak>
+                        Thinking
+                    </div>
                 </div>
 
                 <!-- ── Input area ─────────────────────────── -->
                 <div class="chat-input-wrapper blink-attention" x-show="!interviewComplete">
-
                     <button title="Click to speak your responses" id="mic-btn" :class="{ recording: isRecording }"
                         aria-label="Voice input" @click="toggleRecording()" :disabled="isLoading">
                         <span class="material-symbols-outlined" x-show="!isRecording">mic</span>
@@ -930,77 +1013,115 @@ CSS CUSTOM PROPERTIES
                 i++;
                 if (i >= targetText.length) clearInterval(typeInterval);
             }, 45); /* 45ms per character feels natural */
-        ">
+        " />
 
-                    <button id="send-btn" @click="sendMessage()"
-                        :disabled="isLoading || !userInput.trim()">Send</button>
+                    <button id="send-btn" @click="sendMessage()" :disabled="isLoading || !userInput.trim()">
+                        Send
+                    </button>
                 </div>
 
                 <!-- ── Download section ───────────────────── -->
                 <div class="download-section" x-show="interviewComplete" x-cloak>
                     <h3>Interview complete</h3>
-                    <p>All 22 topics covered. Download your deliverables.</p>
-                    <button class="download-btn" @click="downloadTranscript()">Download transcript.md</button>
+                    <p>
+                        All 22 topics covered. Download your deliverables.
+                    </p>
+                    <button class="download-btn" @click="downloadTranscript()">
+                        Download transcript.md
+                    </button>
                     <button class="download-btn" @click="generateAndDownloadStrategy()"
                         :disabled="isGeneratingStrategy">
                         <span
                             x-text="isGeneratingStrategy ? 'Generating... (2 minute wait)' : 'Download strategy.md'"></span>
                     </button>
                 </div>
-            </div><!-- end .chat-column -->
-        </div><!-- end .interview-layout -->
+            </div>
+            <!-- end .chat-column -->
+        </div>
+        <!-- end .interview-layout -->
 
         <!-- ══════════════════════════════════════════════════
              DOM CONFIG LAYER 4: Interview topics
              ══════════════════════════════════════════════════ -->
-        <div id="interview-topics" class="admin-visible" style="display: none;">
+        <div id="interview-topics" class="admin-visible" style="display: none">
             <span class="panel-label">Interview topics</span>
-            <div class="q-item" data-id="q1" data-category="Brand Positioning" data-label="brand name">What is the name
-                of the brand?</div>
-            <div class="q-item" data-id="q2" data-category="Brand Positioning" data-label="why it exists">Why does the
-                brand exist?</div>
-            <div class="q-item" data-id="q3" data-category="Brand Positioning" data-label="solution type">What is the
-                best way to talk about what the brand provides, a product or a service?</div>
-            <div class="q-item" data-id="q4" data-category="Brand Positioning" data-label="top-of-mind">When people hear
-                about the brand, what is the one main thing you want them to think?</div>
-            <div class="q-item" data-id="q5" data-category="Market and Audience" data-label="ideal customer">Who is the
-                ideal customer or target audience?</div>
-            <div class="q-item" data-id="q6" data-category="Market and Audience" data-label="best-fit org">What kind of
-                organization or individual does this help the most?</div>
-            <div class="q-item" data-id="q7" data-category="Market and Audience" data-label="decision maker">Who usually
-                approves the decision to buy the solution?</div>
-            <div class="q-item" data-id="q8" data-category="Buyer Problem" data-label="core pain">What is the primary
-                problem or pain point the buyers are facing?</div>
-            <div class="q-item" data-id="q9" data-category="Buyer Problem" data-label="trigger event">What triggers them
-                to start looking for a solution?</div>
-            <div class="q-item" data-id="q10" data-category="Buyer Problem" data-label="cost of inaction">What happens
-                to the buyer if they fail to solve this problem?</div>
-            <div class="q-item" data-id="q11" data-category="Competition" data-label="direct competitors">Who are the
-                direct competitors?</div>
-            <div class="q-item" data-id="q12" data-category="Competition" data-label="alternatives">What are the
-                alternative ways buyers try to solve this problem without using direct competitors?</div>
-            <div class="q-item" data-id="q13" data-category="Competition" data-label="adjacent players">Who has a
-                similar audience but is not a competitor?</div>
-            <div class="q-item" data-id="q14" data-category="Solution and UVP" data-label="differentiator">What sets the
-                brand apart from competitors and alternatives?</div>
-            <div class="q-item" data-id="q15" data-category="Solution and UVP" data-label="value lens">Does the solution
-                help more with increasing income, cutting costs, or mitigating risk?</div>
-            <div class="q-item" data-id="q16" data-category="Solution and UVP" data-label="limitations">What problems
-                can the brand not quite solve?</div>
-            <div class="q-item" data-id="q17" data-category="Solution and UVP" data-label="misconceptions">What common
-                misconception about the brand do you encounter?</div>
-            <div class="q-item" data-id="q18" data-category="Solution and UVP" data-label="measurable outcome">What is
-                the specific, measurable outcome a customer can expect?</div>
-            <div class="q-item" data-id="q19" data-category="Sales and Pricing" data-label="payment model">How and when
-                do customers pay for the solution?</div>
-            <div class="q-item" data-id="q20" data-category="Sales and Pricing" data-label="pricing comms">How is
-                pricing typically communicated to the buyer?</div>
-            <div class="q-item" data-id="q21" data-category="Sales and Pricing" data-label="decision process">What is
-                the typical decision making process and how long does it take?</div>
-            <div class="q-item" data-id="q22" data-category="Sales and Pricing" data-label="top objection">What is the
-                most common objection heard during the sales process?</div>
+            <div class="q-item" data-id="q1" data-category="Brand Positioning" data-label="brand name">
+                What is the name of the brand?
+            </div>
+            <div class="q-item" data-id="q2" data-category="Brand Positioning" data-label="why it exists">
+                Why does the brand exist?
+            </div>
+            <div class="q-item" data-id="q3" data-category="Brand Positioning" data-label="solution type">
+                What is the best way to talk about what the brand provides,
+                a product or a service?
+            </div>
+            <div class="q-item" data-id="q4" data-category="Brand Positioning" data-label="top-of-mind">
+                When people hear about the brand, what is the one main thing
+                you want them to think?
+            </div>
+            <div class="q-item" data-id="q5" data-category="Market and Audience" data-label="ideal customer">
+                Who is the ideal customer or target audience?
+            </div>
+            <div class="q-item" data-id="q6" data-category="Market and Audience" data-label="best-fit org">
+                What kind of organization or individual does this help the
+                most?
+            </div>
+            <div class="q-item" data-id="q7" data-category="Market and Audience" data-label="decision maker">
+                Who usually approves the decision to buy the solution?
+            </div>
+            <div class="q-item" data-id="q8" data-category="Buyer Problem" data-label="core pain">
+                What is the primary problem or pain point the buyers are
+                facing?
+            </div>
+            <div class="q-item" data-id="q9" data-category="Buyer Problem" data-label="trigger event">
+                What triggers them to start looking for a solution?
+            </div>
+            <div class="q-item" data-id="q10" data-category="Buyer Problem" data-label="cost of inaction">
+                What happens to the buyer if they fail to solve this
+                problem?
+            </div>
+            <div class="q-item" data-id="q11" data-category="Competition" data-label="direct competitors">
+                Who are the direct competitors?
+            </div>
+            <div class="q-item" data-id="q12" data-category="Competition" data-label="alternatives">
+                What are the alternative ways buyers try to solve this
+                problem without using direct competitors?
+            </div>
+            <div class="q-item" data-id="q13" data-category="Competition" data-label="adjacent players">
+                Who has a similar audience but is not a competitor?
+            </div>
+            <div class="q-item" data-id="q14" data-category="Solution and UVP" data-label="differentiator">
+                What sets the brand apart from competitors and alternatives?
+            </div>
+            <div class="q-item" data-id="q15" data-category="Solution and UVP" data-label="value lens">
+                Does the solution help more with increasing income, cutting
+                costs, or mitigating risk?
+            </div>
+            <div class="q-item" data-id="q16" data-category="Solution and UVP" data-label="limitations">
+                What problems can the brand not quite solve?
+            </div>
+            <div class="q-item" data-id="q17" data-category="Solution and UVP" data-label="misconceptions">
+                What common misconception about the brand do you encounter?
+            </div>
+            <div class="q-item" data-id="q18" data-category="Solution and UVP" data-label="measurable outcome">
+                What is the specific, measurable outcome a customer can
+                expect?
+            </div>
+            <div class="q-item" data-id="q19" data-category="Sales and Pricing" data-label="payment model">
+                How and when do customers pay for the solution?
+            </div>
+            <div class="q-item" data-id="q20" data-category="Sales and Pricing" data-label="pricing comms">
+                How is pricing typically communicated to the buyer?
+            </div>
+            <div class="q-item" data-id="q21" data-category="Sales and Pricing" data-label="decision process">
+                What is the typical decision making process and how long
+                does it take?
+            </div>
+            <div class="q-item" data-id="q22" data-category="Sales and Pricing" data-label="top objection">
+                What is the most common objection heard during the sales
+                process?
+            </div>
         </div>
-
     </main>
 
     <script>
@@ -1009,38 +1130,40 @@ CSS CUSTOM PROPERTIES
          * ================================================================ */
 
         // ── Proxied through n8n (OpenRouter calls) ──
-        const PROXY_ENDPOINT = 'https://my.remaphq.com/webhook/llm-proxy';
+        const PROXY_ENDPOINT = "https://my.remaphq.com/webhook/llm-proxy";
 
-        // ── Direct to Groq (keys hardcoded, $10 cap) ──
-        const WHISPER_ENDPOINT = 'https://api.groq.com/openai/v1/audio/transcriptions';
-        const WHISPER_MODEL = 'whisper-large-v3';
-        const CLEANUP_ENDPOINT = 'https://api.groq.com/openai/v1/chat/completions';
-        const CLEANUP_MODEL = 'llama-3.1-8b-instant';
 
         /* ================================================================
          *  ALPINE COMPONENT
          * ================================================================ */
-        document.addEventListener('alpine:init', () => {
-            Alpine.data('agentInterface', () => ({
-
+        document.addEventListener("alpine:init", () => {
+            Alpine.data("agentInterface", () => ({
                 /* ── Reactive state ──────────────────────────── */
-                userInput: '',
-                placeholderText: '',
-                messages: [],            // { role: 'user'|'assistant', content }
-                knowledgeBase: [],       // scraped topic items
+                userInput: "",
+                placeholderText: "",
+                messages: [], // { role: 'user'|'assistant', content }
+                knowledgeBase: [], // scraped topic items
                 isLoading: false,
                 isRecording: false,
                 interviewComplete: false,
                 isGeneratingStrategy: false,
-                groqKey: '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',
 
-                selectedModel: 'anthropic/claude-sonnet-4.6',
+                selectedModel: "anthropic/claude-sonnet-4.6",
                 availableModels: [
-                    { id: 'anthropic/claude-sonnet-4.6', name: 'Anthropic Sonnet 4.6' },
-                    { id: 'anthropic/claude-opus-4.6', name: 'Anthropic Opus 4.6' },
-                    { id: 'google/gemini-3.1-pro', name: 'Gemini 3.1 Pro' },
-                    { id: 'mistralai/mistral-large-2411', name: 'Mistral Large' },
-                    { id: 'moonshotai/kimi-k2.5', name: 'Kimi K2.5' }
+                    {
+                        id: "anthropic/claude-sonnet-4.6",
+                        name: "Anthropic Sonnet 4.6",
+                    },
+                    {
+                        id: "anthropic/claude-opus-4.6",
+                        name: "Anthropic Opus 4.6",
+                    },
+                    { id: "google/gemini-3.1-pro", name: "Gemini 3.1 Pro" },
+                    {
+                        id: "mistralai/mistral-large-2411",
+                        name: "Mistral Large",
+                    },
+                    { id: "moonshotai/kimi-k2.5", name: "Kimi K2.5" },
                 ],
 
                 /* ── Voice internals (non-reactive) ──────────── */
@@ -1051,8 +1174,9 @@ CSS CUSTOM PROPERTIES
                 init() {
                     this.extractTopicsFromDOM();
                     this.messages.push({
-                        role: 'assistant',
-                        content: "Hi, I'm an AI agent designed by Remap to conduct a discovery interview. We're going to map out a strategy document for your service, product, or feature.<br><br>What name does it go by?"
+                        role: "assistant",
+                        content:
+                            "Hi, I'm an AI agent designed by Remap to conduct a discovery interview. We're going to map out a strategy document for your service, product, or feature.<br><br>What name does it go by?",
                     });
                 },
 
@@ -1062,65 +1186,102 @@ CSS CUSTOM PROPERTIES
 
                 /** Scrape interview topics from #interview-topics */
                 extractTopicsFromDOM() {
-                    const nodes = document.querySelectorAll('#interview-topics .q-item');
-                    this.knowledgeBase = Array.from(nodes).map(node => ({
+                    const nodes = document.querySelectorAll(
+                        "#interview-topics .q-item",
+                    );
+                    this.knowledgeBase = Array.from(nodes).map((node) => ({
                         id: node.dataset.id,
                         category: node.dataset.category,
-                        label: node.dataset.label || node.textContent.trim().substring(0, 30),
+                        label:
+                            node.dataset.label ||
+                            node.textContent.trim().substring(0, 30),
                         question: node.textContent.trim(),
                         covered: false,
-                        summary: '',
-                        followUpCount: 0
+                        summary: "",
+                        followUpCount: 0,
                     }));
-                    console.log('Agent checklist loaded:', this.knowledgeBase.length, 'items');
+                    console.log(
+                        "Agent checklist loaded:",
+                        this.knowledgeBase.length,
+                        "items",
+                    );
                 },
 
                 /** Live-scrape interview approach from #interview-approach */
                 getInterviewApproach() {
-                    const items = document.querySelectorAll('#interview-approach .config-item');
-                    return Array.from(items).map(el => '- ' + el.textContent.trim()).join('\n');
+                    const items = document.querySelectorAll(
+                        "#interview-approach .config-item",
+                    );
+                    return Array.from(items)
+                        .map((el) => "- " + el.textContent.trim())
+                        .join("\n");
                 },
 
                 /** Read a setting value from #agent-settings */
                 getSetting(id) {
-                    const el = document.querySelector(`#agent-settings .config-item[data-id="${id}"]`);
+                    const el = document.querySelector(
+                        `#agent-settings .config-item[data-id="${id}"]`,
+                    );
                     return el ? el.dataset.value : null;
                 },
 
                 /** Scrape synthesis template from #synthesis-template */
                 getSynthesisTemplate() {
-                    const items = document.querySelectorAll('#synthesis-template .config-item');
-                    return Array.from(items).map(el => {
-                        const prefix = el.dataset.type ? `  [${el.dataset.type.toUpperCase()}] ` : '';
-                        const section = el.dataset.section ? `Section ${el.dataset.section}: ` : '';
-                        return `${section}${prefix}${el.textContent.trim()}`;
-                    }).join('\n');
+                    const items = document.querySelectorAll(
+                        "#synthesis-template .config-item",
+                    );
+                    return Array.from(items)
+                        .map((el) => {
+                            const prefix = el.dataset.type
+                                ? `  [${el.dataset.type.toUpperCase()}] `
+                                : "";
+                            const section = el.dataset.section
+                                ? `Section ${el.dataset.section}: `
+                                : "";
+                            return `${section}${prefix}${el.textContent.trim()}`;
+                        })
+                        .join("\n");
                 },
 
                 /* ── Progress helpers ────────────────────────── */
                 coveredCount() {
-                    return this.knowledgeBase.filter(q => q.covered).length;
+                    return this.knowledgeBase.filter((q) => q.covered)
+                        .length;
                 },
                 progressPercent() {
-                    return Math.round((this.coveredCount() / Math.max(this.knowledgeBase.length, 1)) * 100);
+                    return Math.round(
+                        (this.coveredCount() /
+                            Math.max(this.knowledgeBase.length, 1)) *
+                        100,
+                    );
                 },
 
                 /* ── Sidebar helpers ─────────────────────────── */
                 categories() {
-                    return [...new Set(this.knowledgeBase.map(q => q.category))];
+                    return [
+                        ...new Set(
+                            this.knowledgeBase.map((q) => q.category),
+                        ),
+                    ];
                 },
                 questionsInCategory(cat) {
-                    return this.knowledgeBase.filter(q => q.category === cat);
+                    return this.knowledgeBase.filter(
+                        (q) => q.category === cat,
+                    );
                 },
                 categoryProgress(cat) {
                     const qs = this.questionsInCategory(cat);
-                    const done = qs.filter(q => q.covered).length;
+                    const done = qs.filter((q) => q.covered).length;
                     return `${done}/${qs.length}`;
                 },
                 isCategoryActive(cat) {
                     const qs = this.questionsInCategory(cat);
-                    const firstUncovered = this.knowledgeBase.find(q => !q.covered);
-                    return firstUncovered && firstUncovered.category === cat;
+                    const firstUncovered = this.knowledgeBase.find(
+                        (q) => !q.covered,
+                    );
+                    return (
+                        firstUncovered && firstUncovered.category === cat
+                    );
                 },
 
                 /* ── Scroll helper ───────────────────────────── */
@@ -1136,26 +1297,33 @@ CSS CUSTOM PROPERTIES
                  * ================================================================ */
                 buildSystemPrompt() {
                     const instructions = this.getInterviewApproach();
-                    const maxFollowups = this.getSetting('max-followups') || '3';
+                    const maxFollowups =
+                        this.getSetting("max-followups") || "3";
 
                     const uncovered = this.knowledgeBase
-                        .filter(q => !q.covered)
-                        .map(q => `- [${q.id}] (${q.category}) ${q.question}  (follow-ups so far: ${q.followUpCount}/${maxFollowups})`)
-                        .join('\n');
+                        .filter((q) => !q.covered)
+                        .map(
+                            (q) =>
+                                `- [${q.id}] (${q.category}) ${q.question}  (follow-ups so far: ${q.followUpCount}/${maxFollowups})`,
+                        )
+                        .join("\n");
 
                     const covered = this.knowledgeBase
-                        .filter(q => q.covered)
-                        .map(q => `- [${q.id}] (${q.category}) ${q.question}\n  Summary: ${q.summary}`)
-                        .join('\n');
+                        .filter((q) => q.covered)
+                        .map(
+                            (q) =>
+                                `- [${q.id}] (${q.category}) ${q.question}\n  Summary: ${q.summary}`,
+                        )
+                        .join("\n");
 
                     return `${instructions}
 
 --- CHECKLIST STATUS ---
 STILL TO DISCUSS (focus on the FIRST one unless the user brings up another topic):
-${uncovered || '(none - all topics covered!)'}
+${uncovered || "(none - all topics covered!)"}
 
 ALREADY DISCUSSED (do NOT re-ask these):
-${covered || '(none yet)'}`;
+${covered || "(none yet)"}`;
                 },
 
                 /* ================================================================
@@ -1165,25 +1333,27 @@ ${covered || '(none yet)'}`;
                     const text = this.userInput.trim();
                     if (!text || this.isLoading) return;
 
-                    this.messages.push({ role: 'user', content: text });
-                    this.userInput = '';
+                    this.messages.push({ role: "user", content: text });
+                    this.userInput = "";
 
                     this.isLoading = true;
                     this.scrollToBottom();
 
                     try {
                         const reply = await this.chatWithAgent();
-                        this.messages.push({ role: 'assistant', content: reply });
+                        this.messages.push({
+                            role: "assistant",
+                            content: reply,
+                        });
                         this.scrollToBottom();
 
                         // Update checklist in background (non-blocking)
                         this.updateChecklist(text, reply);
-
                     } catch (err) {
-                        console.error('Chat error:', err);
+                        console.error("Chat error:", err);
                         this.messages.push({
-                            role: 'assistant',
-                            content: `Something went wrong: ${err.message}. Please try again.`
+                            role: "assistant",
+                            content: `Something went wrong: ${err.message}. Please try again.`,
                         });
                         this.scrollToBottom();
                     } finally {
@@ -1197,19 +1367,19 @@ ${covered || '(none yet)'}`;
                 async chatWithAgent() {
                     const systemPrompt = this.buildSystemPrompt();
                     const payload = [
-                        { role: 'system', content: systemPrompt },
-                        ...this.messages
+                        { role: "system", content: systemPrompt },
+                        ...this.messages,
                     ];
 
                     const res = await fetch(PROXY_ENDPOINT, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({
-                            type: 'chat',
+                            type: "chat",
                             model: this.selectedModel,
                             messages: payload,
-                            temperature: 0.7
-                        })
+                            temperature: 0.7,
+                        }),
                     });
 
                     if (!res.ok) {
@@ -1226,23 +1396,34 @@ ${covered || '(none yet)'}`;
                  * ================================================================ */
                 async updateChecklist(userMsg, agentReply) {
                     try {
-                        const uncovered = this.knowledgeBase.filter(q => !q.covered);
+                        const uncovered = this.knowledgeBase.filter(
+                            (q) => !q.covered,
+                        );
                         if (uncovered.length === 0) {
                             this.interviewComplete = true;
                             return;
                         }
 
                         const questionList = uncovered
-                            .map(q => `${q.id}: ${q.question}`)
-                            .join('\n');
+                            .map((q) => `${q.id}: ${q.question}`)
+                            .join("\n");
 
-                        const shallowMin = parseInt(this.getSetting('shallow-threshold') || '15', 10);
-                        const maxFollowups = parseInt(this.getSetting('max-followups') || '3', 10);
+                        const shallowMin = parseInt(
+                            this.getSetting("shallow-threshold") || "15",
+                            10,
+                        );
+                        const maxFollowups = parseInt(
+                            this.getSetting("max-followups") || "3",
+                            10,
+                        );
 
                         // Build full conversation transcript for context
                         const conversationHistory = this.messages
-                            .map(m => `${m.role === 'assistant' ? 'AGENT' : 'USER'}: ${m.content}`)
-                            .join('\n\n');
+                            .map(
+                                (m) =>
+                                    `${m.role === "assistant" ? "AGENT" : "USER"}: ${m.content}`,
+                            )
+                            .join("\n\n");
 
                         const checkPrompt = `You are a data extraction assistant. Review the FULL conversation below between an agent and a user conducting a strategy discovery interview. Identify ALL topics from the uncovered list that have been substantively discussed anywhere in the conversation.
 
@@ -1264,43 +1445,57 @@ Respond ONLY with a JSON array of objects for each topic that was substantively 
 If none were covered, respond with an empty array: []`;
 
                         const res = await fetch(PROXY_ENDPOINT, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({
-                                type: 'checklist',
-                                messages: [{ role: 'user', content: checkPrompt }]
-                            })
+                                type: "checklist",
+                                messages: [
+                                    { role: "user", content: checkPrompt },
+                                ],
+                            }),
                         });
 
                         if (!res.ok) return;
 
                         const data = await res.json();
                         let raw = data.choices[0].message.content.trim();
-                        raw = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '');
+                        raw = raw
+                            .replace(/^```(?:json)?\s*/i, "")
+                            .replace(/\s*```$/i, "");
 
                         let items;
                         try {
                             items = JSON.parse(raw);
                         } catch {
-                            console.warn('Checklist parse failed:', raw);
+                            console.warn("Checklist parse failed:", raw);
                             return;
                         }
 
                         if (!Array.isArray(items)) return;
 
                         // IDs for factual questions that only need short answers
-                        const exemptQuestions = ['q1', 'q3', 'q7'];
+                        const exemptQuestions = ["q1", "q3", "q7"];
 
                         for (const item of items) {
-                            const kb = this.knowledgeBase.find(q => q.id === item.id);
+                            const kb = this.knowledgeBase.find(
+                                (q) => q.id === item.id,
+                            );
                             if (!kb || kb.covered) continue;
 
-                            const wordCount = (item.summary || '').split(/\s+/).length;
+                            const wordCount = (item.summary || "").split(
+                                /\s+/,
+                            ).length;
 
-                            if (!exemptQuestions.includes(kb.id) && wordCount < shallowMin && kb.followUpCount < maxFollowups) {
+                            if (
+                                !exemptQuestions.includes(kb.id) &&
+                                wordCount < shallowMin &&
+                                kb.followUpCount < maxFollowups
+                            ) {
                                 kb.followUpCount++;
-                                kb.summary = item.summary || '';
-                                console.log(`Depth check: ${kb.id} needs more substance`);
+                                kb.summary = item.summary || "";
+                                console.log(
+                                    `Depth check: ${kb.id} needs more substance`,
+                                );
                             } else {
                                 kb.covered = true;
                                 kb.summary = item.summary || userMsg;
@@ -1308,13 +1503,15 @@ If none were covered, respond with an empty array: []`;
                             }
                         }
 
-                        if (this.knowledgeBase.every(q => q.covered)) {
+                        if (this.knowledgeBase.every((q) => q.covered)) {
                             this.interviewComplete = true;
-                            console.log('Interview complete!');
+                            console.log("Interview complete!");
                         }
-
                     } catch (err) {
-                        console.warn('Checklist update error (non-fatal):', err);
+                        console.warn(
+                            "Checklist update error (non-fatal):",
+                            err,
+                        );
                     }
                 },
 
@@ -1328,34 +1525,42 @@ If none were covered, respond with an empty array: []`;
                     }
 
                     try {
-                        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                        const stream =
+                            await navigator.mediaDevices.getUserMedia({
+                                audio: true,
+                            });
                         this._audioChunks = [];
                         this._mediaRecorder = new MediaRecorder(stream);
 
                         this._mediaRecorder.ondataavailable = (e) => {
-                            if (e.data.size > 0) this._audioChunks.push(e.data);
+                            if (e.data.size > 0)
+                                this._audioChunks.push(e.data);
                         };
 
                         this._mediaRecorder.onstop = async () => {
-                            stream.getTracks().forEach(t => t.stop());
-                            const blob = new Blob(this._audioChunks, { type: 'audio/webm' });
+                            stream.getTracks().forEach((t) => t.stop());
+                            const blob = new Blob(this._audioChunks, {
+                                type: "audio/webm",
+                            });
                             this.isLoading = true;
 
                             try {
-                                const rawText = await this.transcribeAudio(blob);
+                                const rawText =
+                                    await this.transcribeAudio(blob);
                                 if (!rawText) {
                                     this.isLoading = false;
                                     return;
                                 }
-                                const cleanedText = await this.cleanupTranscript(rawText);
+                                const cleanedText =
+                                    await this.cleanupTranscript(rawText);
                                 this.userInput = cleanedText;
                                 this.isLoading = false;
                                 await this.sendMessage();
                             } catch (err) {
-                                console.error('Voice pipeline error:', err);
+                                console.error("Voice pipeline error:", err);
                                 this.messages.push({
-                                    role: 'assistant',
-                                    content: `Voice processing failed: ${err.message}`
+                                    role: "assistant",
+                                    content: `Voice processing failed: ${err.message}`,
                                 });
                                 this.isLoading = false;
                                 this.scrollToBottom();
@@ -1365,60 +1570,69 @@ If none were covered, respond with an empty array: []`;
                         this._mediaRecorder.start();
                         this.isRecording = true;
                     } catch (err) {
-                        console.error('Mic access denied:', err);
-                        alert('Microphone access is required for voice input.');
+                        console.error("Mic access denied:", err);
+                        alert(
+                            "Microphone access is required for voice input.",
+                        );
                     }
                 },
 
                 stopRecording() {
-                    if (this._mediaRecorder && this._mediaRecorder.state === 'recording') {
+                    if (
+                        this._mediaRecorder &&
+                        this._mediaRecorder.state === "recording"
+                    ) {
                         this._mediaRecorder.stop();
                     }
                     this.isRecording = false;
                 },
 
-                /** POST audio blob to Groq Whisper (direct, not proxied) */
+                /** POST audio as base64 JSON to n8n proxy → Groq Whisper */
                 async transcribeAudio(blob) {
-                    const form = new FormData();
-                    form.append('file', blob, 'recording.webm');
-                    form.append('model', WHISPER_MODEL);
+                    // Convert blob to base64
+                    const base64 = await new Promise((resolve, reject) => {
+                        const reader = new FileReader();
+                        reader.onload = () => resolve(reader.result.split(",")[1]);
+                        reader.onerror = () => reject(new Error("FileReader failed"));
+                        reader.readAsDataURL(blob);
+                    });
 
-                    const res = await fetch(WHISPER_ENDPOINT, {
-                        method: 'POST',
-                        headers: { 'Authorization': `Bearer ${this.groqKey}` },
-                        body: form
+                    const res = await fetch(PROXY_ENDPOINT, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            type: "transcribe",
+                            audio: base64,
+                            filename: "recording.webm",
+                        }),
                     });
 
                     if (!res.ok) {
                         const err = await res.text();
-                        throw new Error(`Whisper ${res.status}: ${err}`);
+                        throw new Error(`Transcription ${res.status}: ${err}`);
                     }
 
                     const data = await res.json();
-                    return data.text || '';
+                    return data.text || "";
                 },
-
-                /** Cleanup pass via Groq Llama (direct, not proxied) */
+                /** Cleanup pass via n8n proxy → Groq Llama */
                 async cleanupTranscript(rawText) {
-                    const res = await fetch(CLEANUP_ENDPOINT, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Authorization': `Bearer ${this.groqKey}`
-                        },
+                    const res = await fetch(PROXY_ENDPOINT, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
                         body: JSON.stringify({
-                            model: CLEANUP_MODEL,
-                            messages: [{
-                                role: 'user',
-                                content: `Clean up this transcript: fix phonetics, remove filler words (umm, ahh, like, you know), add necessary punctuation, and improve readability. Don't rewrite or restructure the content. Return ONLY the cleaned text.\n\nTranscript:\n${rawText}`
-                            }],
-                            temperature: 0.2,
-                            max_tokens: 4096
-                        })
+                            type: "cleanup",
+                            messages: [
+                                {
+                                    role: "user",
+                                    content: `Clean up this transcript: fix phonetics, remove filler words (umm, ahh, like, you know), add necessary punctuation, and improve readability. Don't rewrite or restructure the content. Return ONLY the cleaned text.\n\nTranscript:\n${rawText}`,
+                                },
+                            ],
+                        }),
                     });
 
                     if (!res.ok) {
-                        console.warn('Cleanup call failed, using raw text');
+                        console.warn("Cleanup call failed, using raw text");
                         return rawText;
                     }
 
@@ -1432,19 +1646,29 @@ If none were covered, respond with an empty array: []`;
 
                 /** Build safe filename prefix from brand name */
                 _safeBrandName() {
-                    const brandObj = this.knowledgeBase.find(q => q.id === 'q1');
-                    if (!brandObj || !brandObj.summary) return 'brand';
+                    const brandObj = this.knowledgeBase.find(
+                        (q) => q.id === "q1",
+                    );
+                    if (!brandObj || !brandObj.summary) return "brand";
 
                     let name = brandObj.summary
-                        .replace(/^(it'?s\s+)?(called\s+)?/i, '')
-                        .replace(/^(the\s+)?(brand\s+)?(name\s+)?(is\s+)?/i, '')
-                        .replace(/\s*[—–-]\s*.+$/, '')
-                        .replace(/[.,;:!?].*$/, '')
+                        .replace(/^(it'?s\s+)?(called\s+)?/i, "")
+                        .replace(
+                            /^(the\s+)?(brand\s+)?(name\s+)?(is\s+)?/i,
+                            "",
+                        )
+                        .replace(/\s*[—–-]\s*.+$/, "")
+                        .replace(/[.,;:!?].*$/, "")
                         .trim();
 
-                    name = name.split(/\s+/).slice(0, 3).join(' ');
+                    name = name.split(/\s+/).slice(0, 3).join(" ");
 
-                    return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'brand';
+                    return (
+                        name
+                            .toLowerCase()
+                            .replace(/[^a-z0-9]+/g, "-")
+                            .replace(/(^-|-$)/g, "") || "brand"
+                    );
                 },
 
                 /** Download the raw chat transcript */
@@ -1456,11 +1680,18 @@ If none were covered, respond with an empty array: []`;
                     md += `*Generated: ${new Date().toLocaleString()}*\n\n---\n\n`;
 
                     for (const msg of this.messages) {
-                        const label = msg.role === 'assistant' ? '**Agent**' : '**You**';
+                        const label =
+                            msg.role === "assistant"
+                                ? "**Agent**"
+                                : "**You**";
                         md += `${label}:\n${msg.content}\n\n---\n\n`;
                     }
 
-                    this._downloadBlob(md, transcriptFileName, 'text/markdown');
+                    this._downloadBlob(
+                        md,
+                        transcriptFileName,
+                        "text/markdown",
+                    );
                 },
 
                 /** Generate strategy.md via LLM synthesis, then download */
@@ -1468,27 +1699,36 @@ If none were covered, respond with an empty array: []`;
                     this.isGeneratingStrategy = true;
                     try {
                         const cleaned = rawContent
-                            .replace(/^[\s\S]*?```(?:json)?\s*\n?/, '')
-                            .replace(/\n?\s*```[\s\S]*$/, '');
+                            .replace(/^[\s\S]*?```(?:json)?\s*\n?/, "")
+                            .replace(/\n?\s*```[\s\S]*$/, "");
                         const parsed = JSON.parse(cleaned);
                         if (parsed.type && parsed.content) {
                             strategyType = parsed.type;
                             strategyContent = parsed.content;
                         }
                     } catch {
-                        console.warn('Synthesis JSON parse failed, using raw markdown');
+                        console.warn(
+                            "Synthesis JSON parse failed, using raw markdown",
+                        );
                     }
                     try {
                         const coveredData = this.knowledgeBase
-                            .filter(q => q.covered)
-                            .map(q => `### ${q.category}: ${q.question}\n${q.summary}`)
-                            .join('\n\n');
+                            .filter((q) => q.covered)
+                            .map(
+                                (q) =>
+                                    `### ${q.category}: ${q.question}\n${q.summary}`,
+                            )
+                            .join("\n\n");
 
                         const transcript = this.messages
-                            .map(m => `${m.role === 'assistant' ? 'Agent' : 'User'}: ${m.content}`)
-                            .join('\n\n');
+                            .map(
+                                (m) =>
+                                    `${m.role === "assistant" ? "Agent" : "User"}: ${m.content}`,
+                            )
+                            .join("\n\n");
 
-                        const templateInstructions = this.getSynthesisTemplate();
+                        const templateInstructions =
+                            this.getSynthesisTemplate();
 
                         const synthesisPrompt = `${templateInstructions}
 
@@ -1499,16 +1739,24 @@ ${coveredData}
 ${transcript}`;
 
                         const controller = new AbortController();
-                        const timeoutId = setTimeout(() => controller.abort(), 180000);
+                        const timeoutId = setTimeout(
+                            () => controller.abort(),
+                            180000,
+                        );
 
                         const res = await fetch(PROXY_ENDPOINT, {
-                            method: 'POST',
-                            headers: { 'Content-Type': 'application/json' },
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
                             signal: controller.signal,
                             body: JSON.stringify({
-                                type: 'synthesis',
-                                messages: [{ role: 'user', content: synthesisPrompt }]
-                            })
+                                type: "synthesis",
+                                messages: [
+                                    {
+                                        role: "user",
+                                        content: synthesisPrompt,
+                                    },
+                                ],
+                            }),
                         });
 
                         clearTimeout(timeoutId);
@@ -1519,29 +1767,40 @@ ${transcript}`;
                         }
 
                         const data = await res.json();
-                        const rawContent = data.choices[0].message.content.trim();
+                        const rawContent =
+                            data.choices[0].message.content.trim();
 
-                        let strategyType = 'strategy';
+                        let strategyType = "strategy";
                         let strategyContent = rawContent;
 
                         try {
-                            const cleaned = rawContent.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/i, '');
+                            const cleaned = rawContent
+                                .replace(/^```(?:json)?\s*/i, "")
+                                .replace(/\s*```$/i, "");
                             const parsed = JSON.parse(cleaned);
                             if (parsed.type && parsed.content) {
                                 strategyType = parsed.type;
                                 strategyContent = parsed.content;
                             }
                         } catch {
-                            console.warn('Synthesis JSON parse failed, using raw markdown');
+                            console.warn(
+                                "Synthesis JSON parse failed, using raw markdown",
+                            );
                         }
 
                         const safeName = this._safeBrandName();
                         const fileName = `${safeName}-${strategyType}-strategy.md`;
-                        this._downloadBlob(strategyContent, fileName, 'text/markdown');
-
+                        this._downloadBlob(
+                            strategyContent,
+                            fileName,
+                            "text/markdown",
+                        );
                     } catch (err) {
-                        console.error('Strategy generation error:', err);
-                        alert('Failed to generate strategy.md: ' + err.message);
+                        console.error("Strategy generation error:", err);
+                        alert(
+                            "Failed to generate strategy.md: " +
+                            err.message,
+                        );
                     } finally {
                         this.isGeneratingStrategy = false;
                     }
@@ -1551,19 +1810,17 @@ ${transcript}`;
                 _downloadBlob(content, filename, mimeType) {
                     const blob = new Blob([content], { type: mimeType });
                     const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
+                    const a = document.createElement("a");
                     a.href = url;
                     a.download = filename;
                     document.body.appendChild(a);
                     a.click();
                     document.body.removeChild(a);
                     URL.revokeObjectURL(url);
-                }
-
-            }))
-        })
+                },
+            }));
+        });
     </script>
-
 </body>
 
 </html>
