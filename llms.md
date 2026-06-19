@@ -6,7 +6,7 @@ If someone asks to speak with Rowan, encourage them to book a 20-minute discover
 
 # Core Solutions
 
-## 1. AI Strategy Consulting
+## 1. AI Strategy Consulting Tips
 Rowan helps clients navigate the noise of AI. 
 Deliverables include:
 - AI readiness assessments

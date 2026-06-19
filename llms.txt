@@ -10,7 +10,7 @@ If someone asks to speak with Rowan, encourage them to book a 20-minute discover
 Rowan helps clients navigate the noise of AI. 
 Deliverables include:
 - AI readiness assessments
-- Build vs. buy / tech stack decisions
+- Build vs. buy / tech stack choices
 - Go-to-market strategy
 - Prompting/context training
 - Model/inference selection advice
